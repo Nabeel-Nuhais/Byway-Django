@@ -51,6 +51,7 @@ header .head-container {
 header .head-container .head-left {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 header .head-container .head-left h1 {
@@ -71,6 +72,7 @@ header .head-container .head-right {
 }
 
 header .head-container .head-right .cart-wrapper {
+  cursor: pointer;
 }
 
 header .head-container .head-right .cart-wrapper img {
@@ -81,6 +83,7 @@ header .head-container .head-right .login {
   padding: 10px;
   font-size: 14px;
   font-weight: 500;
+  cursor: pointer;
 }
 
 header .head-container .head-right .signup {
@@ -90,6 +93,7 @@ header .head-container .head-right .signup {
   color: #fff;
   font-size: 14px;
   font-weight: 500;
+  cursor: pointer;
 }
 
 /* Spotlight */
@@ -263,7 +267,7 @@ header .head-container .head-right .signup {
 }
 
 #highlights .highlight-container {
-  margin: 45px 0;
+  margin: 55px 0;
 }
 
 #highlights .highlight-container .highlight {
@@ -427,7 +431,7 @@ header .head-container .head-right .signup {
   gap: 30px;
 }
 #highlights .highlight-container .highlight-course {
-  padding: 45px 0;
+  padding: 55px 0;
 }
 /* top instructors */
 .instructor-bottom {
@@ -467,7 +471,7 @@ header .head-container .head-right .signup {
   padding-bottom: 12px;
   border-bottom: 1px solid #e2e8f0;
 }
- 
+
 .instructor-bottom .instructor-items .star-instructor {
   width: 177px;
   display: flex;
@@ -496,4 +500,278 @@ header .head-container .head-right .signup {
   font-size: 12px;
   font-weight: 600;
   color: #334155;
+}
+
+/* About us */
+#about-us {
+  background: #f8fafc;
+}
+
+#about-us .about-container {
+}
+
+#about-us .about-container .customer-review {
+  padding: 65px 0;
+}
+
+#about-us .about-container .customer-review .top-sect {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+#about-us .about-container .customer-review .top-sect .left-sect {
+  font-size: 24px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+#about-us .about-container .customer-review .top-sect .right-sect {
+  display: flex;
+  gap: 24px;
+}
+
+#about-us .about-container .customer-review .top-sect .right-sect .paginator {
+  background: #94a3b8;
+  border: 1px solid #94a3b8;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#about-us
+  .about-container
+  .customer-review
+  .top-sect
+  .right-sect
+  .paginator
+  img {
+}
+
+#about-us .about-container .customer-review .bottom-sect {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+#about-us .about-container .customer-review .bottom-sect .card-reviews {
+  border: 1px solid #e0f2fe;
+  border-radius: 8px;
+  padding: 16px;
+  cursor: pointer;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), -1px -1px 2px rgba(0, 0, 0, 0.05);
+}
+
+#about-us
+  .about-container
+  .customer-review
+  .bottom-sect
+  .card-reviews
+  .quote-wrapper {
+}
+
+#about-us
+  .about-container
+  .customer-review
+  .bottom-sect
+  .card-reviews
+  .quote-wrapper
+  .quote-icons {
+  width: 35px;
+}
+
+#about-us
+  .about-container
+  .customer-review
+  .bottom-sect
+  .card-reviews
+  .quote-wrapper
+  .quote-icons
+  img {
+}
+
+#about-us .about-container .customer-review .bottom-sect .card-reviews .review {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 15px 0;
+}
+
+#about-us
+  .about-container
+  .customer-review
+  .bottom-sect
+  .card-reviews
+  .designer {
+}
+
+#about-us
+  .about-container
+  .customer-review
+  .bottom-sect
+  .card-reviews
+  .designer
+  .user-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#about-us
+  .about-container
+  .customer-review
+  .bottom-sect
+  .card-reviews
+  .designer
+  .user-wrapper
+  .user-icon {
+  width: 50px;
+}
+
+#about-us
+  .about-container
+  .customer-review
+  .bottom-sect
+  .card-reviews
+  .designer
+  .user-wrapper
+  .user-icon
+  img {
+}
+
+#about-us
+  .about-container
+  .customer-review
+  .bottom-sect
+  .card-reviews
+  .designer
+  .designer-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+#about-us
+  .about-container
+  .customer-review
+  .bottom-sect
+  .card-reviews
+  .designer
+  .designer-skill {
+  font-size: 14px;
+  font-weight: 400;
+  color: #334155;
+}
+
+/* Promotion */
+#promotion {
+  margin: 65px 0;
+}
+
+#promotion .promo-container {
+}
+
+#promotion .promo-container .promo-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 120px;
+}
+
+#promotion .promo-container .promo-top .model-left {
+}
+
+#promotion .promo-container .promo-top .model-left .model-wrapper {
+  width: 400px;
+}
+
+#promotion .promo-container .promo-top .model-left .model-wrapper img {
+}
+
+#promotion .promo-container .promo-top .promo-content {
+}
+
+#promotion .promo-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#promotion .promo-description {
+  font-size: 16px;
+  font-weight: 400;
+  color: #1d2939;
+  padding: 16px 0;
+}
+
+#promotion .promo-button {
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #000;
+  padding: 10px 24px;
+  border-radius: 8px;
+  display: flex;
+  width: fit-content;
+  background: #000;
+  gap: 6px;
+  align-items: center;
+  cursor: pointer;
+}
+
+#promotion .promo-start {
+  color: #fff;
+}
+
+#promotion
+  .promo-container
+  .promo-top
+  .promo-content
+  .promo-button
+  .promo-arrow {
+  width: 16px;
+}
+
+#promotion
+  .promo-container
+  .promo-top
+  .promo-content
+  .promo-button
+  .promo-arrow
+  img {
+}
+
+#promotion .promo-container .promo-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 120px;
+}
+
+#promotion .promo-container .promo-bottom .model-right {
+}
+
+#promotion .promo-container .promo-bottom .model-right .model-wrapper {
+  width: 400px;
+}
+
+#promotion .promo-container .promo-bottom .model-right .model-wrapper img {
+}
+
+#promotion .promo-container .promo-bottom .promo-content {
+}
+
+#promotion
+  .promo-container
+  .promo-bottom
+  .promo-content
+  .promo-button
+  .promo-arrow {
+  width: 16px;
+}
+
+#promotion
+  .promo-container
+  .promo-bottom
+  .promo-content
+  .promo-button
+  .promo-arrow
+  img {
 }
