@@ -23,6 +23,9 @@ body img {
   display: block;
   width: 100%;
 }
+body p {
+  line-height: 22px;
+}
 
 .wrapper {
   width: 90%;
@@ -774,4 +777,106 @@ header .head-container .head-right .signup {
   .promo-button
   .promo-arrow
   img {
+}
+
+/* Footer */
+footer {
+  background: #1e293b;
+}
+
+footer .footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 65px 0;
+}
+
+footer .footer-container .first-item {
+}
+
+footer .footer-container .first-item .logo-title {
+  display: flex;
+  align-items: center;
+  color: #f1f5f9;
+  font-size: 24px;
+}
+
+footer .footer-container .first-item .logo-title .logo-wrapper {
+  width: 34px;
+}
+
+footer .footer-container .item-title {
+  color: #f1f5f9;
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 15px;
+}
+
+footer .footer-container p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #cbd5e1;
+  padding-top: 15px;
+}
+
+footer .footer-container li {
+  font-size: 14px;
+  font-weight: 500;
+  color: #cbd5e1;
+  padding-bottom: 12px;
+}
+
+footer .footer-container .first-item .logo-title .logo-wrapper img {
+}
+
+footer .footer-container .first-item .first-description {
+}
+
+footer .footer-container .second-item {
+}
+
+footer .footer-container .second-item ul {
+}
+
+footer .footer-container .second-item ul li {
+}
+
+footer .footer-container .third-item {
+}
+
+footer .footer-container .third-item ul {
+}
+
+footer .footer-container .third-item ul li {
+}
+
+footer .footer-container .fourth-item {
+}
+footer .footer-container .fourth-item ul {
+}
+
+footer .footer-container .fourth-item ul li {
+}
+
+footer .footer-container .fourth-item .social-media {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5px;
+}
+
+footer .footer-container .fourth-item .social-media .social-wrapper {
+  cursor: pointer;
+  width: 28px;
+}
+
+footer .footer-container .fourth-item .social-media .social-wrapper img {
+  border-radius: 50%;
+}
+footer .footer-container .bg-wrapper {
+  width: 40px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  height: 40px;
+  align-items: center;
 }
