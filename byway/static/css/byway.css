@@ -1,3 +1,6 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -10,32 +13,20 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 ol,
 ul {
   list-style: none;
 }
-body {
-  font-family: "poppinsregular", Arial, Helvetica, sans-serif;
-}
 body img {
   display: block;
   width: 100%;
-}
-body p {
-  line-height: 22px;
 }
 .wrapper {
   width: 90%;
   margin: 0 auto;
   max-width: 1200px;
-}
-@font-face {
-  font-family: "poppinsregular";
-  src: url("../src/assets/fonts/poppins-regular-webfont.woff2") format("woff2"),
-    url("../src/assets/fonts/poppins-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
 }
 
 /* Header */
@@ -442,11 +433,21 @@ header .head-container .head-right .signup {
   gap: 30px;
 }
 #about-us .about-container .customer-review .bottom-sect .card-reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border: 1px solid #e0f2fe;
   border-radius: 8px;
   padding: 16px;
   cursor: pointer;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), -1px -1px 2px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+#about-us .about-container .customer-review .bottom-sect .card-reviews.active {
+  opacity: 1;
+  transform: translateX(0);
 }
 #about-us
   .about-container
@@ -543,6 +544,7 @@ header .head-container .head-right .signup {
 }
 #promotion .promo-start {
   color: #fff;
+  cursor: pointer;
 }
 #promotion
   .promo-container
@@ -687,6 +689,9 @@ footer .footer-container .bg-wrapper {
   #promotion .promo-container .promo-bottom {
     padding-top: 60px;
   }
+  #about-us .about-container .customer-review .bottom-sect {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media all and (max-width: 640px) {
@@ -810,9 +815,6 @@ footer .footer-container .bg-wrapper {
     .designer
     .designer-skill {
     font-size: 13px;
-  }
-  #about-us .about-container .customer-review .bottom-sect {
-    grid-template-columns: repeat(2, 1fr);
   }
   #promotion .promo-title {
     font-size: 18px;
