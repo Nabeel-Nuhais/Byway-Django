@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    background: transparent;
+    font-weight: normal;
+    text-decoration: none;
+    outline: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  ol,
+  ul {
+    list-style: none;
+  }
+  body {
+    font-family: "poppinsregular", Arial, Helvetica, sans-serif;
+  }
+  
+  body img {
+    display: block;
+    width: 100%;
+  }
+  body p {
+    line-height: 22px;
+  }
+  
+  .wrapper {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  @font-face {
+    font-family: "poppinsregular";
+    src: url("../src/assets/fonts/poppins-regular-webfont.woff2") format("woff2"),
+      url("../src/assets/fonts/poppins-regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+/* Header */
+header {
+    padding: 10px 0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  header .head-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  header .head-container .head-left {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  header .head-container .head-left h1 {
+  }
+  
+  header .head-container .head-left h1 img {
+  }
+  
+  header .head-container .head-left .logo-name {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  header .head-container .head-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  header .head-container .head-right .cart-wrapper {
+    cursor: pointer;
+  }
+  
+  header .head-container .head-right .cart-wrapper img {
+  }
+  
+  header .head-container .head-right .login {
+    border: 1px solid #334155;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  header .head-container .head-right .signup {
+    border: 1px solid #334155;
+    padding: 10px;
+    background: #334155;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+  }
