@@ -63,17 +63,20 @@ header .head-container .head-right {
 }
 
 header .head-container .head-right .wishlist-wrapper {
+  width: 24px;
   cursor: pointer;
 }
 header .head-container .head-right .cart-wrapper {
   cursor: pointer;
+  width: 24px;
 }
 header .head-container .head-right .bell-wrapper {
   cursor: pointer;
+  width: 24px;
 }
 header .head-container .head-right .user-border {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,4 +86,379 @@ header .head-container .head-right .user-border {
 }
 header .head-container .head-right .user-border .user-wrapper {
   width: 22px;
+}
+
+/* Spotlight */
+#spotlight {
+  background: #f8fafc;
+}
+
+#spotlight .spot-container {
+  padding: 45px 0;
+  position: relative;
+}
+
+#spotlight .spot-container .navigate-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+#spotlight .spot-container .navigate-top .home {
+  font-size: 14px;
+  font-weight: 400;
+  color: #334155;
+}
+
+#spotlight .spot-container .navigate-top .right-arrow {
+  width: 6px;
+}
+
+#spotlight .spot-container .navigate-top .right-arrow img {
+}
+
+#spotlight .spot-container .navigate-top .categories {
+  font-size: 14px;
+  font-weight: 400;
+  color: #334155;
+}
+
+#spotlight .spot-container .navigate-top .cat-content {
+}
+
+#spotlight .spot-container .navigate-top .cat-content a {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#spotlight .spot-container .details-middle {
+  padding: 30px 0 15px 0;
+}
+
+#spotlight .spot-container .details-middle .cat-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #0f172a;
+  width: 60%;
+  padding-bottom: 15px;
+}
+
+#spotlight .spot-container .details-middle .cat-description {
+  font-size: 16px;
+  font-weight: 400;
+  width: 60%;
+}
+
+#spotlight .spot-container .reviews-bottom {
+}
+
+#spotlight .spot-container .reviews-bottom .ratings-top {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+#spotlight .spot-container .reviews-bottom .ratings-top .rates-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#spotlight
+  .spot-container
+  .reviews-bottom
+  .ratings-top
+  .rates-container
+  .rating {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fec84b;
+}
+
+#spotlight
+  .spot-container
+  .reviews-bottom
+  .ratings-top
+  .rates-container
+  .rate-stars {
+  width: 96px;
+}
+
+#spotlight
+  .spot-container
+  .reviews-bottom
+  .ratings-top
+  .rates-container
+  .rate-stars
+  img {
+}
+
+#spotlight
+  .spot-container
+  .reviews-bottom
+  .ratings-top
+  .rates-container
+  .total-rating {
+  font-size: 14px;
+  font-weight: 400;
+  color: #334155;
+}
+
+#spotlight .spot-container .reviews-bottom .ratings-top .separator {
+  color: #334155;
+}
+
+#spotlight .spot-container .reviews-bottom .ratings-top .class-details {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#spotlight
+  .spot-container
+  .reviews-bottom
+  .ratings-top
+  .class-details
+  .total-hours {
+  font-size: 14px;
+  font-weight: 400;
+  color: #334155;
+}
+
+#spotlight
+  .spot-container
+  .reviews-bottom
+  .ratings-top
+  .class-details
+  .total-lectures {
+  font-size: 14px;
+  font-weight: 400;
+  color: #334155;
+}
+
+#spotlight .spot-container .reviews-bottom .ratings-top .class-details .levels {
+  font-size: 14px;
+  font-weight: 400;
+  color: #334155;
+}
+
+#spotlight .spot-container .reviews-bottom .autor-middle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 0;
+}
+
+#spotlight .spot-container .reviews-bottom .autor-middle .author-icon {
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+#spotlight
+  .spot-container
+  .reviews-bottom
+  .autor-middle
+  .author-icon
+  .author-wrapper {
+  width: 40px;
+}
+#spotlight
+  .spot-container
+  .reviews-bottom
+  .autor-middle
+  .author-icon
+  .author-wrapper
+  img {
+}
+#spotlight .spot-container .reviews-bottom .autor-middle .creator-name {
+  font-size: 14px;
+  font-weight: 400;
+  color: #334155;
+}
+
+#spotlight
+  .spot-container
+  .reviews-bottom
+  .autor-middle
+  .creator-name
+  .author-name {
+}
+
+#spotlight .spot-container .reviews-bottom .author-languages {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+#spotlight .spot-container .reviews-bottom .author-languages .language-wrapper {
+  width: 24px;
+}
+
+#spotlight
+  .spot-container
+  .reviews-bottom
+  .author-languages
+  .language-wrapper
+  img {
+}
+
+#spotlight .spot-container .reviews-bottom .author-languages .language-one {
+  font-size: 14px;
+  font-weight: 400;
+  color: #334155;
+}
+
+#spotlight .spot-container .reviews-bottom .author-languages .language-two {
+  font-size: 14px;
+  font-weight: 400;
+  color: #334155;
+}
+
+#spotlight .spot-container .reviews-bottom .author-languages .language-three {
+  font-size: 14px;
+  font-weight: 400;
+  color: #334155;
+}
+
+#spotlight .spot-container .reviews-bottom .author-languages .language-four {
+  font-size: 14px;
+  font-weight: 400;
+  color: #334155;
+}
+/* Card */
+#card {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+#card .card-container {
+  border: 1px solid #e2e8f0;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), -1px -1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  width: fit-content;
+}
+#card .card-container .top-padding {
+  padding: 20px;
+}
+
+#card .card-container .image-top {
+  width: 356px;
+}
+
+#card .card-container .image-top img {
+}
+
+#card .card-container .content-middle {
+}
+
+#card .card-container .content-middle .course-rate {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 24px 0;
+}
+
+#card .card-container .content-middle .course-rate .offer-price {
+  font-size: 24px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+#card .card-container .content-middle .course-rate .old-price {
+  color: #cfd1d4;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: line-through;
+}
+
+#card .card-container .content-middle .course-rate .offer-percentage {
+  font-size: 20px;
+  font-weight: 600;
+  color: #16a34a;
+}
+
+#card .card-container .content-middle .course-buy {
+  display: grid;
+  gap: 16px;
+}
+
+#card .card-container .content-middle .course-buy .add-to {
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 8px;
+  background: #020617;
+  border: 1px solid #020617;
+}
+#card .card-container .content-middle .course-buy .buy-now {
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #0f172a;
+  padding: 10px 24px;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid #020617;
+}
+
+#card .card-container .content-bottom {
+  border-top: 1px solid #e2e8f0;
+  margin-top: 10px;
+}
+
+#card .card-container .content-bottom .bottom-padding {
+  padding: 20px;
+}
+
+#card .card-container .content-bottom .bottom-padding .share-text {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#card .card-container .content-bottom .bottom-padding .social-media {
+  display: flex;
+  gap: 18px;
+  padding-top: 5px;
+}
+
+#card
+  .card-container
+  .content-bottom
+  .bottom-padding
+  .social-media
+  .bg-wrapper {
+  width: 40px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  height: 40px;
+  align-items: center;
+  border: 1px solid #e0f2fe;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), -1px -1px 2px rgba(0, 0, 0, 0.05);
+}
+
+#card
+  .card-container
+  .content-bottom
+  .bottom-padding
+  .social-media
+  .bg-wrapper
+  .social-wrapper {
+  cursor: pointer;
+  width: 28px;
+}
+
+#card
+  .card-container
+  .content-bottom
+  .bottom-padding
+  .social-media
+  .bg-wrapper
+  .social-wrapper
+  img {
+  border-radius: 50%;
 }

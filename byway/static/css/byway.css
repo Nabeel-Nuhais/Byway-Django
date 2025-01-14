@@ -613,6 +613,7 @@ footer .footer-container p {
   padding-top: 15px;
 }
 footer .footer-container li {
+  cursor: pointer;
   font-size: 14px;
   font-weight: 500;
   color: #cbd5e1;
