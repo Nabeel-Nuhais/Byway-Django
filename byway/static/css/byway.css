@@ -301,6 +301,9 @@ header .head-container .head-right .signup {
   cursor: pointer;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), -1px -1px 2px rgba(0, 0, 0, 0.05);
 }
+.course-items:hover {
+  background: #f8fafc;
+}
 .course-items .course-title {
   font-size: 18px;
   font-weight: 600;
@@ -355,6 +358,9 @@ header .head-container .head-right .signup {
   padding: 16px;
   cursor: pointer;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), -1px -1px 2px rgba(0, 0, 0, 0.05);
+}
+.instructor-bottom .instructor-items:hover {
+  background: #f8fafc;
 }
 .instructor-bottom .instructor-items .instructor-image {
   width: 100%;
