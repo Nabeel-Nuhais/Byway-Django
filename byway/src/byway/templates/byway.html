@@ -44,13 +44,22 @@
           </div>
           <div class="spot-right">
             <div class="dots">
-              <img src="{% static '../static/images/spot-dots-1.png' %}" alt="dots" />
+              <img
+                src="{% static '../static/images/spot-dots-1.png' %}"
+                alt="dots"
+              />
             </div>
             <div class="circle-wrapper blue-circle">
-              <img src="{% static '../static/images/spot-model-one.png' %}" alt="Graduate" />
+              <img
+                src="{% static '../static/images/spot-model-one.png' %}"
+                alt="Graduate"
+              />
             </div>
             <div class="dots_two">
-              <img src="{% static '../static/images/spot-dots-2.jpg' %}" alt="dots" />
+              <img
+                src="{% static '../static/images/spot-dots-2.jpg' %}"
+                alt="dots"
+              />
             </div>
             <div class="circle-wrapper red-circle">
               <img
@@ -59,7 +68,10 @@
               />
             </div>
             <div class="diamond">
-              <img src="{% static '../static/images/diamond-spot.svg' %}" alt="diomond" />
+              <img
+                src="{% static '../static/images/diamond-spot.svg' %}"
+                alt="diomond"
+              />
             </div>
             <div class="circle-wrapper yellow-circle">
               <img
@@ -68,7 +80,10 @@
               />
             </div>
             <div class="model_four-wrapper">
-              <img src="{% static '../static/images/spot-model-4.jpg' %}" alt="model_four" />
+              <img
+                src="{% static '../static/images/spot-model-4.jpg' %}"
+                alt="model_four"
+              />
             </div>
           </div>
         </div>
@@ -115,63 +130,48 @@
               <a href="#" class="right-see_all">See All</a>
             </div>
             <div class="bottom-cards">
-              <div class="card-items">
-                <div class="astro-wrapper">
-                  <h4 class="cat-icons">
-                    <img src="{% static '../static/images/astrology.svg' %}" alt="astrology" />
-                  </h4>
-                </div>
-                <div class="cat-title">Astrology</div>
-                <div class="course-count">11 Courses</div>
-              </div>
+              {% for category in categories %}
               <div class="card-items">
                 <div class="astro-wrapper">
                   <h4 class="cat-icons">
                     <img
-                      src="{% static '../static/images/devlopment.svg' %}"
-                      alt="development"
+                      src="{{ category.icon.url }}"
+                      alt="{{ category.title }}"
                     />
                   </h4>
                 </div>
-                <div class="cat-title">Development</div>
-                <div class="course-count">12 Courses</div>
-              </div>
-              <div class="card-items">
-                <div class="astro-wrapper">
-                  <h4 class="cat-icons">
-                    <img src="{% static '../static/images/marketing.svg' %}" alt="marketing" />
-                  </h4>
+                <div class="cat-title">{{ category.title }}</div>
+                <div class="course-count">
+                  {{ category.course_count }} Courses
                 </div>
-                <div class="cat-title">Marketing</div>
-                <div class="course-count">12 Courses</div>
               </div>
-              <div class="card-items">
-                <div class="astro-wrapper">
-                  <h4 class="cat-icons">
-                    <img src="{% static '../static/images/physics.svg' %}" alt="physics" />
-                  </h4>
-                </div>
-                <div class="cat-title">Physics</div>
-                <div class="course-count">14 Courses</div>
-              </div>
+              {% endfor %}
             </div>
           </div>
           <!-- top courses -->
           <div class="highlight highlight-course">
             <div class="top-headings">
               <h5 class="left-heading">Top Courses</h5>
-              <a href="{% url 'web:courses' %}" class="right-see_all">See All</a>
+              <a href="{% url 'web:courses' %}" class="right-see_all"
+                >See All</a
+              >
             </div>
             <div class="course-bottom">
               <a href="{% url 'web:single' %}" class="course-items">
                 <div class="course-image">
-                  <img src="{% static '../static/images/bg.jpg' %}" alt="course_image" />
+                  <img
+                    src="{% static '../static/images/bg.jpg' %}"
+                    alt="course_image"
+                  />
                 </div>
                 <h5 class="course-title">Begginer's Guide to Design</h5>
                 <p class="mentor">By Rondald Richards</p>
                 <div class="star-wrapper">
                   <h4 class="star-icons">
-                    <img src="{% static '../static/images/ratings.svg' %}" alt="star" />
+                    <img
+                      src="{% static '../static/images/ratings.svg' %}"
+                      alt="star"
+                    />
                   </h4>
                   <p class="rating-count">(1200 Ratings)</p>
                 </div>
@@ -182,13 +182,19 @@
               </a>
               <div class="course-items">
                 <div class="course-image">
-                  <img src="{% static '../static/images/bg.jpg' %}" alt="course_image" />
+                  <img
+                    src="{% static '../static/images/bg.jpg' %}"
+                    alt="course_image"
+                  />
                 </div>
                 <h5 class="course-title">Begginer's Guide to Design</h5>
                 <p class="mentor">By Rondald Richards</p>
                 <div class="star-wrapper">
                   <h4 class="star-icons">
-                    <img src="{% static '../static/images/ratings.svg' %}" alt="star" />
+                    <img
+                      src="{% static '../static/images/ratings.svg' %}"
+                      alt="star"
+                    />
                   </h4>
                   <p class="rating-count">(1200 Ratings)</p>
                 </div>
@@ -199,13 +205,19 @@
               </div>
               <div class="course-items">
                 <div class="course-image">
-                  <img src="{% static '../static/images/bg.jpg' %}" alt="course_image" />
+                  <img
+                    src="{% static '../static/images/bg.jpg' %}"
+                    alt="course_image"
+                  />
                 </div>
                 <h5 class="course-title">Begginer's Guide to Design</h5>
                 <p class="mentor">By Rondald Richards</p>
                 <div class="star-wrapper">
                   <h4 class="star-icons">
-                    <img src="{% static '../static/images/ratings.svg' %}" alt="star" />
+                    <img
+                      src="{% static '../static/images/ratings.svg' %}"
+                      alt="star"
+                    />
                   </h4>
                   <p class="rating-count">(1200 Ratings)</p>
                 </div>
@@ -216,13 +228,19 @@
               </div>
               <div class="course-items">
                 <div class="course-image">
-                  <img src="{% static '../static/images/bg.jpg' %}" alt="course_image" />
+                  <img
+                    src="{% static '../static/images/bg.jpg' %}"
+                    alt="course_image"
+                  />
                 </div>
                 <h5 class="course-title">Begginer's Guide to Design</h5>
                 <p class="mentor">By Rondald Richards</p>
                 <div class="star-wrapper">
                   <h4 class="star-icons">
-                    <img src="{% static '../static/images/ratings.svg' %}" alt="star" />
+                    <img
+                      src="{% static '../static/images/ratings.svg' %}"
+                      alt="star"
+                    />
                   </h4>
                   <p class="rating-count">(1200 Ratings)</p>
                 </div>
@@ -242,13 +260,19 @@
             <div class="instructor-bottom">
               <div class="instructor-items">
                 <div class="instructor-image">
-                  <img src="{% static '../static/images/model-5.jpg' %}" alt="course_image" />
+                  <img
+                    src="{% static '../static/images/model-5.jpg' %}"
+                    alt="course_image"
+                  />
                 </div>
                 <h5 class="course-title">Ronald Richards</h5>
                 <p class="instructor-skills">UI/UX Designer</p>
                 <div class="star-instructor">
                   <h4 class="star-single">
-                    <img src="{% static '../static/images/star.svg' %}" alt="star" />
+                    <img
+                      src="{% static '../static/images/star.svg' %}"
+                      alt="star"
+                    />
                     <p class="instructor-rating">4.9</p>
                   </h4>
                   <div class="students-count">2400 Students</div>
@@ -256,13 +280,19 @@
               </div>
               <div class="instructor-items">
                 <div class="instructor-image">
-                  <img src="{% static '../static/images/model-5.jpg' %}" alt="course_image" />
+                  <img
+                    src="{% static '../static/images/model-5.jpg' %}"
+                    alt="course_image"
+                  />
                 </div>
                 <h5 class="course-title">Ronald Richards</h5>
                 <p class="instructor-skills">UI/UX Designer</p>
                 <div class="star-instructor">
                   <h4 class="star-single">
-                    <img src="{% static '../static/images/star.svg' %}" alt="star" />
+                    <img
+                      src="{% static '../static/images/star.svg' %}"
+                      alt="star"
+                    />
                     <p class="instructor-rating">4.9</p>
                   </h4>
                   <div class="students-count">2400 Students</div>
@@ -270,13 +300,19 @@
               </div>
               <div class="instructor-items">
                 <div class="instructor-image">
-                  <img src="{% static '../static/images/model-5.jpg' %}" alt="course_image" />
+                  <img
+                    src="{% static '../static/images/model-5.jpg' %}"
+                    alt="course_image"
+                  />
                 </div>
                 <h5 class="course-title">Ronald Richards</h5>
                 <p class="instructor-skills">UI/UX Designer</p>
                 <div class="star-instructor">
                   <h4 class="star-single">
-                    <img src="{% static '../static/images/star.svg' %}" alt="star" />
+                    <img
+                      src="{% static '../static/images/star.svg' %}"
+                      alt="star"
+                    />
                     <p class="instructor-rating">4.9</p>
                   </h4>
                   <div class="students-count">2400 Students</div>
@@ -284,13 +320,19 @@
               </div>
               <div class="instructor-items">
                 <div class="instructor-image">
-                  <img src="{% static '../static/images/model-5.jpg' %}" alt="course_image" />
+                  <img
+                    src="{% static '../static/images/model-5.jpg' %}"
+                    alt="course_image"
+                  />
                 </div>
                 <h5 class="course-title">Ronald Richards</h5>
                 <p class="instructor-skills">UI/UX Designer</p>
                 <div class="star-instructor">
                   <h4 class="star-single">
-                    <img src="{% static '../static/images/star.svg' %}" alt="star" />
+                    <img
+                      src="{% static '../static/images/star.svg' %}"
+                      alt="star"
+                    />
                     <p class="instructor-rating">4.9</p>
                   </h4>
                   <div class="students-count">2400 Students</div>
@@ -298,13 +340,19 @@
               </div>
               <div class="instructor-items">
                 <div class="instructor-image">
-                  <img src="{% static '../static/images/model-5.jpg' %}" alt="course_image" />
+                  <img
+                    src="{% static '../static/images/model-5.jpg' %}"
+                    alt="course_image"
+                  />
                 </div>
                 <h5 class="course-title">Ronald Richards</h5>
                 <p class="instructor-skills">UI/UX Designer</p>
                 <div class="star-instructor">
                   <h4 class="star-single">
-                    <img src="{% static '../static/images/star.svg' %}" alt="star" />
+                    <img
+                      src="{% static '../static/images/star.svg' %}"
+                      alt="star"
+                    />
                     <p class="instructor-rating">4.9</p>
                   </h4>
                   <div class="students-count">2400 Students</div>
@@ -346,7 +394,10 @@
               <div class="card-reviews">
                 <div class="quote-wrapper">
                   <h4 class="quote-icons">
-                    <img src="{% static '../static/images/quotes.svg' %}" alt="quotes" />
+                    <img
+                      src="{% static '../static/images/quotes.svg' %}"
+                      alt="quotes"
+                    />
                   </h4>
                 </div>
                 <p class="review">
@@ -357,7 +408,10 @@
                 <div class="designer">
                   <div class="user-wrapper">
                     <h4 class="user-icon">
-                      <img src="{% static '../static/images/designer.png' %}" alt="designer" />
+                      <img
+                        src="{% static '../static/images/designer.png' %}"
+                        alt="designer"
+                      />
                     </h4>
                     <div class="designer-info">
                       <h5 class="designer-name">Jane Doe</h5>
@@ -370,7 +424,10 @@
               <div class="card-reviews">
                 <div class="quote-wrapper">
                   <h4 class="quote-icons">
-                    <img src="{% static '../static/images/quotes.svg' %}" alt="quotes" />
+                    <img
+                      src="{% static '../static/images/quotes.svg' %}"
+                      alt="quotes"
+                    />
                   </h4>
                 </div>
                 <p class="review">
@@ -380,7 +437,10 @@
                 <div class="designer">
                   <div class="user-wrapper">
                     <h4 class="user-icon">
-                      <img src="{% static '../static/images/designer.png' %}" alt="designer" />
+                      <img
+                        src="{% static '../static/images/designer.png' %}"
+                        alt="designer"
+                      />
                     </h4>
                     <div class="designer-info">
                       <h5 class="designer-name">John Smith</h5>
@@ -393,7 +453,10 @@
               <div class="card-reviews">
                 <div class="quote-wrapper">
                   <h4 class="quote-icons">
-                    <img src="{% static '../static/images/quotes.svg' %}" alt="quotes" />
+                    <img
+                      src="{% static '../static/images/quotes.svg' %}"
+                      alt="quotes"
+                    />
                   </h4>
                 </div>
                 <p class="review">
@@ -403,7 +466,10 @@
                 <div class="designer">
                   <div class="user-wrapper">
                     <h4 class="user-icon">
-                      <img src="{% static '../static/images/designer.png' %}" alt="designer" />
+                      <img
+                        src="{% static '../static/images/designer.png' %}"
+                        alt="designer"
+                      />
                     </h4>
                     <div class="designer-info">
                       <h5 class="designer-name">Anna Lee</h5>
@@ -416,7 +482,10 @@
               <div class="card-reviews">
                 <div class="quote-wrapper">
                   <h4 class="quote-icons">
-                    <img src="{% static '../static/images/quotes.svg' %}" alt="quotes" />
+                    <img
+                      src="{% static '../static/images/quotes.svg' %}"
+                      alt="quotes"
+                    />
                   </h4>
                 </div>
                 <p class="review">
@@ -426,7 +495,10 @@
                 <div class="designer">
                   <div class="user-wrapper">
                     <h4 class="user-icon">
-                      <img src="{% static '../static/images/designer.png' %}" alt="designer" />
+                      <img
+                        src="{% static '../static/images/designer.png' %}"
+                        alt="designer"
+                      />
                     </h4>
                     <div class="designer-info">
                       <h5 class="designer-name">Emily Clark</h5>
@@ -439,7 +511,10 @@
               <div class="card-reviews">
                 <div class="quote-wrapper">
                   <h4 class="quote-icons">
-                    <img src="{% static '../static/images/quotes.svg' %}" alt="quotes" />
+                    <img
+                      src="{% static '../static/images/quotes.svg' %}"
+                      alt="quotes"
+                    />
                   </h4>
                 </div>
                 <p class="review">
@@ -449,7 +524,10 @@
                 <div class="designer">
                   <div class="user-wrapper">
                     <h4 class="user-icon">
-                      <img src="{% static '../static/images/designer.png' %}" alt="designer" />
+                      <img
+                        src="{% static '../static/images/designer.png' %}"
+                        alt="designer"
+                      />
                     </h4>
                     <div class="designer-info">
                       <h5 class="designer-name">Mike Johnson</h5>
@@ -462,7 +540,10 @@
               <div class="card-reviews">
                 <div class="quote-wrapper">
                   <h4 class="quote-icons">
-                    <img src="{% static '../static/images/quotes.svg' %}" alt="quotes" />
+                    <img
+                      src="{% static '../static/images/quotes.svg' %}"
+                      alt="quotes"
+                    />
                   </h4>
                 </div>
                 <p class="review">
@@ -472,7 +553,10 @@
                 <div class="designer">
                   <div class="user-wrapper">
                     <h4 class="user-icon">
-                      <img src="{% static '../static/images/designer.png' %}" alt="designer" />
+                      <img
+                        src="{% static '../static/images/designer.png' %}"
+                        alt="designer"
+                      />
                     </h4>
                     <div class="designer-info">
                       <h5 class="designer-name">Sophia Brown</h5>
@@ -494,7 +578,10 @@
           <div class="promo-top">
             <div class="model-left">
               <h4 class="model-wrapper">
-                <img src="{% static '../static/images/model-female.png' %}" alt="model" />
+                <img
+                  src="{% static '../static/images/model-female.png' %}"
+                  alt="model"
+                />
               </h4>
             </div>
             <div class="promo-content">
@@ -508,7 +595,10 @@
                   Start Your Instructor Journey
                 </button>
                 <div class="promo-arrow">
-                  <img src="{% static '../static/images/arrow-right.svg' %}" alt="arrow" />
+                  <img
+                    src="{% static '../static/images/arrow-right.svg' %}"
+                    alt="arrow"
+                  />
                 </div>
               </div>
             </div>
@@ -523,13 +613,19 @@
               <div class="promo-button">
                 <button class="promo-start">Checkout Courses</button>
                 <div class="promo-arrow">
-                  <img src="{% static '../static/images/arrow-right.svg' %}" alt="arrow" />
+                  <img
+                    src="{% static '../static/images/arrow-right.svg' %}"
+                    alt="arrow"
+                  />
                 </div>
               </div>
             </div>
             <div class="model-right">
               <h4 class="model-wrapper">
-                <img src="{% static '../static/images/model-male.png' %}" alt="model" />
+                <img
+                  src="{% static '../static/images/model-male.png' %}"
+                  alt="model"
+                />
               </h4>
             </div>
           </div>
@@ -544,7 +640,10 @@
           <div class="first-item">
             <div class="logo-title">
               <h4 class="logo-wrapper">
-                <img src="{% static '../static/images/logo.svg' %}" alt="logo" />
+                <img
+                  src="{% static '../static/images/logo.svg' %}"
+                  alt="logo"
+                />
               </h4>
               Byway
             </div>
@@ -585,22 +684,34 @@
             <div class="social-media">
               <div class="bg-wrapper">
                 <a href="https://www.facebook.com/" class="social-wrapper">
-                  <img src="{% static '../static/images/facebook.png' %}" alt="facebook" />
+                  <img
+                    src="{% static '../static/images/facebook.png' %}"
+                    alt="facebook"
+                  />
                 </a>
               </div>
               <div class="bg-wrapper">
                 <a href="https://github.com/" class="social-wrapper">
-                  <img src="{% static '../static/images/github.png' %}" alt="github" />
+                  <img
+                    src="{% static '../static/images/github.png' %}"
+                    alt="github"
+                  />
                 </a>
               </div>
               <div class="bg-wrapper">
                 <a href="https://www.google.com/" class="social-wrapper">
-                  <img src="{% static '../static/images/google.jpg' %}" alt="google" />
+                  <img
+                    src="{% static '../static/images/google.jpg' %}"
+                    alt="google"
+                  />
                 </a>
               </div>
               <div class="bg-wrapper">
                 <a href="https://x.com/" class="social-wrapper">
-                  <img src="{% static '../static/images/twitter.avif' %}" alt="twitter" />
+                  <img
+                    src="{% static '../static/images/twitter.avif' %}"
+                    alt="twitter"
+                  />
                 </a>
               </div>
               <div class="bg-wrapper">
@@ -608,7 +719,10 @@
                   href="https://www.microsoft.com/en-in/"
                   class="social-wrapper"
                 >
-                  <img src="{% static '../static/images/microsoft.png' %}" alt="microsoft" />
+                  <img
+                    src="{% static '../static/images/microsoft.png' %}"
+                    alt="microsoft"
+                  />
                 </a>
               </div>
             </div>

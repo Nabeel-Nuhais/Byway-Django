@@ -1,9 +1,14 @@
 from django.shortcuts import render
 from django.http.response import HttpResponse
-
+from web.models import Categories
 
 def index(request):
-    return render(request, "byway.html")
+    categories = Categories.objects.all()
+    
+    context = {
+        "categories": categories,
+    }
+    return render(request, "byway.html", context=context)
 
 
 def courses(request):
