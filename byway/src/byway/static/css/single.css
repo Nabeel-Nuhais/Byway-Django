@@ -1,0 +1,1303 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  background: transparent;
+  font-weight: normal;
+  text-decoration: none;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+ol,
+ul {
+  list-style: none;
+}
+body img {
+  display: block;
+  width: 100%;
+}
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+/* Header */
+header {
+  padding: 10px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+header .head-container {
+  display: flex;
+  justify-content: space-between;
+}
+header .head-container .head-left {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #0f172a;
+}
+header .head-container .head-left .logo-name {
+  font-size: 16px;
+  font-weight: 500;
+}
+header .head-container .head-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header .head-container .head-right .wishlist-wrapper {
+  width: 24px;
+  cursor: pointer;
+}
+header .head-container .head-right .cart-wrapper {
+  cursor: pointer;
+  width: 24px;
+}
+header .head-container .head-right .bell-wrapper {
+  cursor: pointer;
+  width: 24px;
+}
+header .head-container .head-right .user-border {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: #334155;
+  border-radius: 50%;
+}
+header .head-container .head-right .user-border .user-wrapper {
+  width: 22px;
+}
+
+/* Spotlight */
+#spotlight {
+  background: #f8fafc;
+}
+#spotlight .spot-container {
+  padding: 45px 0;
+  position: relative;
+}
+#spotlight .spot-container .navigate-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+#spotlight .spot-container .navigate-top .home {
+  font-size: 14px;
+  font-weight: 400;
+  color: #334155;
+}
+#spotlight .spot-container .navigate-top .right-arrow {
+  width: 6px;
+}
+#spotlight .spot-container .navigate-top .categories {
+  font-size: 14px;
+  font-weight: 400;
+  color: #334155;
+}
+#spotlight .spot-container .navigate-top .cat-content a {
+  font-size: 14px;
+  font-weight: 400;
+  color: #2563eb;
+}
+#spotlight .spot-container .details-middle {
+  padding: 30px 0 15px 0;
+}
+#spotlight .spot-container .details-middle .cat-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #0f172a;
+  width: 60%;
+  padding-bottom: 15px;
+}
+#spotlight .spot-container .details-middle .cat-description {
+  font-size: 16px;
+  font-weight: 400;
+  width: 60%;
+}
+#spotlight .spot-container .reviews-bottom .ratings-top {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+#spotlight .spot-container .reviews-bottom .ratings-top .rates-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#spotlight
+  .spot-container
+  .reviews-bottom
+  .ratings-top
+  .rates-container
+  .rating {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fec84b;
+}
+#spotlight
+  .spot-container
+  .reviews-bottom
+  .ratings-top
+  .rates-container
+  .rate-stars {
+  width: 96px;
+}
+#spotlight
+  .spot-container
+  .reviews-bottom
+  .ratings-top
+  .rates-container
+  .total-rating {
+  font-size: 14px;
+  font-weight: 400;
+  color: #334155;
+}
+#spotlight .spot-container .reviews-bottom .ratings-top .separator {
+  color: #334155;
+}
+#spotlight .spot-container .reviews-bottom .ratings-top .class-details {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#spotlight
+  .spot-container
+  .reviews-bottom
+  .ratings-top
+  .class-details
+  .total-hours {
+  font-size: 14px;
+  font-weight: 400;
+  color: #334155;
+}
+#spotlight
+  .spot-container
+  .reviews-bottom
+  .ratings-top
+  .class-details
+  .total-lectures {
+  font-size: 14px;
+  font-weight: 400;
+  color: #334155;
+}
+#spotlight .spot-container .reviews-bottom .ratings-top .class-details .levels {
+  font-size: 14px;
+  font-weight: 400;
+  color: #334155;
+}
+#spotlight .spot-container .reviews-bottom .autor-middle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 0;
+}
+#spotlight .spot-container .reviews-bottom .autor-middle .author-icon {
+  cursor: pointer;
+  border-radius: 50%;
+}
+#spotlight
+  .spot-container
+  .reviews-bottom
+  .autor-middle
+  .author-icon
+  .author-wrapper {
+  width: 40px;
+}
+#spotlight .spot-container .reviews-bottom .autor-middle .creator-name {
+  font-size: 14px;
+  font-weight: 400;
+  color: #334155;
+}
+#spotlight
+  .spot-container
+  .reviews-bottom
+  .autor-middle
+  .creator-name
+  .author-name {
+  color: #2563eb;
+}
+#spotlight .spot-container .reviews-bottom .author-languages {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+#spotlight .spot-container .reviews-bottom .author-languages .language-wrapper {
+  width: 24px;
+}
+#spotlight .spot-container .reviews-bottom .author-languages .language-one {
+  font-size: 14px;
+  font-weight: 400;
+  color: #334155;
+}
+#spotlight .spot-container .reviews-bottom .author-languages .language-two {
+  font-size: 14px;
+  font-weight: 400;
+  color: #334155;
+}
+#spotlight .spot-container .reviews-bottom .author-languages .language-three {
+  font-size: 14px;
+  font-weight: 400;
+  color: #334155;
+}
+#spotlight .spot-container .reviews-bottom .author-languages .language-four {
+  font-size: 14px;
+  font-weight: 400;
+  color: #334155;
+}
+/* Card */
+#card {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+#card .card-container {
+  border: 1px solid #e2e8f0;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), -1px -1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  width: fit-content;
+}
+#card .card-container .top-padding {
+  padding: 20px;
+}
+#card .card-container .image-top {
+  width: 356px;
+}
+#card .card-container .content-middle .course-rate {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 24px 0;
+}
+#card .card-container .content-middle .course-rate .offer-price {
+  font-size: 24px;
+  font-weight: 600;
+  color: #0f172a;
+}
+#card .card-container .content-middle .course-rate .old-price {
+  color: #cfd1d4;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: line-through;
+}
+#card .card-container .content-middle .course-rate .offer-percentage {
+  font-size: 20px;
+  font-weight: 600;
+  color: #16a34a;
+}
+#card .card-container .content-middle .course-buy {
+  display: grid;
+  gap: 16px;
+}
+#card .card-container .content-middle .course-buy .add-to {
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 8px;
+  background: #020617;
+  border: 1px solid #020617;
+}
+#card .card-container .content-middle .course-buy .buy-now {
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #0f172a;
+  padding: 10px 24px;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid #020617;
+}
+#card .card-container .content-bottom {
+  border-top: 1px solid #e2e8f0;
+  margin-top: 10px;
+}
+#card .card-container .content-bottom .bottom-padding {
+  padding: 20px;
+}
+#card .card-container .content-bottom .bottom-padding .share-text {
+  font-size: 16px;
+  font-weight: 500;
+}
+#card .card-container .content-bottom .bottom-padding .social-media {
+  display: flex;
+  gap: 18px;
+  padding-top: 5px;
+}
+#card
+  .card-container
+  .content-bottom
+  .bottom-padding
+  .social-media
+  .bg-wrapper {
+  width: 40px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  height: 40px;
+  align-items: center;
+  border: 1px solid #e0f2fe;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), -1px -1px 2px rgba(0, 0, 0, 0.05);
+}
+#card
+  .card-container
+  .content-bottom
+  .bottom-padding
+  .social-media
+  .bg-wrapper
+  .social-wrapper {
+  cursor: pointer;
+  width: 28px;
+}
+#card
+  .card-container
+  .content-bottom
+  .bottom-padding
+  .social-media
+  .bg-wrapper
+  .social-wrapper
+  img {
+  border-radius: 50%;
+}
+
+/* Course Description */
+#course-description .description-container {
+  padding-top: 45px;
+}
+#course-description .description-container .description-top {
+  display: flex;
+  gap: 24px;
+  padding-bottom: 25px;
+}
+#course-description .description-container .description-top .description {
+  font-size: 14px;
+  font-weight: 400;
+  color: #0f172a;
+  border: 1px solid #e0f2fe;
+  padding: 18px 21px;
+  border-radius: 8px;
+  width: 148px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+#course-description .description-container .details-container {
+  padding: 25px 0;
+  border-bottom: 1px solid #e2e8f0;
+  width: 66%;
+  border-top: 1px solid #e2e8f0;
+}
+#course-description .description-headings {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0f172a;
+}
+#course-description .description-paragraph {
+  font-size: 16px;
+  font-weight: 400;
+  color: #334155;
+}
+#course-description .course-padding {
+  padding: 10px 0 15px;
+}
+#course-description .certification-padding {
+  padding: 10px 0 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+#course-description .profile-padding {
+  padding-top: 10px;
+}
+#course-description
+  .description-container
+  .details-container
+  .instructor
+  .instructor-padding {
+  padding: 20px 0 10px;
+}
+#course-description
+  .description-container
+  .details-container
+  .instructor
+  .instructor-details
+  .instructor-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2563eb;
+}
+#course-description
+  .description-container
+  .details-container
+  .instructor
+  .instructor-details
+  .instructor-skill {
+  font-size: 16px;
+  font-weight: 400;
+  color: #334155;
+}
+#course-description
+  .description-container
+  .details-container
+  .instructor
+  .instructor-profile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 0;
+}
+#course-description
+  .description-container
+  .details-container
+  .instructor
+  .instructor-profile
+  .instructor-image
+  .instructor-wrapper {
+  width: 120px;
+}
+#course-description
+  .description-container
+  .details-container
+  .instructor
+  .instructor-profile
+  .instructor-achievments
+  .achieve-wrapper {
+  display: flex;
+  align-items: center;
+}
+#course-description
+  .description-container
+  .details-container
+  .instructor
+  .instructor-profile
+  .instructor-achievments
+  .cap-padding {
+  padding: 8px 0;
+}
+#course-description
+  .description-container
+  .details-container
+  .instructor
+  .instructor-profile
+  .instructor-achievments
+  .icon-wrapper {
+  width: 17px;
+  margin-right: 8px;
+}
+#course-description
+  .description-container
+  .details-container
+  .instructor
+  .instructor-profile
+  .instructor-achievments
+  .cap-width {
+  width: 19px;
+}
+#course-description
+  .description-container
+  .details-container
+  .instructor
+  .instructor-profile
+  .instructor-achievments
+  .play-width {
+  width: 16px;
+  margin-left: 2px;
+}
+#course-description
+  .description-container
+  .details-container
+  .instructor
+  .instructor-profile
+  .instructor-achievments
+  .achieve-wrapper
+  .achieve-details {
+  font-size: 14px;
+  font-weight: 400;
+  color: #0f172a;
+}
+#course-description .description-container .syllabus-bottom {
+  width: 66%;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 0 0 20px;
+}
+#course-description .description-container .syllabus-bottom .syllabus-padding {
+  padding: 25px 0 15px;
+}
+#course-description .description-container .syllabus-bottom .syllabus-grid {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+#course-description
+  .description-container
+  .syllabus-bottom
+  .syllabus-grid
+  .grid-flex {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 20px 30px;
+}
+#course-description
+  .description-container
+  .syllabus-bottom
+  .syllabus-grid
+  .border-separator {
+  width: 100%;
+  border: 1px solid #e2e8f0;
+  margin: 20px 0;
+}
+#course-description .description-container .syllabus-bottom .down-arrow {
+  width: 12px;
+}
+#course-description
+  .description-container
+  .syllabus-bottom
+  .syllabus-grid
+  .syllabus-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f172a;
+}
+#course-description
+  .description-container
+  .syllabus-bottom
+  .syllabus-grid
+  .syllabus-lesson {
+  margin-left: auto;
+  font-size: 14px;
+  font-weight: 400;
+  color: #334155;
+}
+#course-description
+  .description-container
+  .syllabus-bottom
+  .syllabus-grid
+  .lesson-time {
+  font-size: 14px;
+  font-weight: 400;
+  color: #334155;
+}
+
+/* Review Section */
+#reviews .review-container .title-top {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0f172a;
+  padding-top: 25px;
+}
+#reviews .review-container .star-ratings {
+  width: 100%;
+}
+#reviews .review-container .star-ratings .full-review .single-star {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 0 15px;
+}
+#reviews .review-container .review-wrapper-single {
+  width: 20px;
+}
+#reviews .review-container .review-wrapper {
+  width: 100px;
+}
+#reviews
+  .review-container
+  .star-ratings
+  .full-review
+  .single-star
+  .count-reviews {
+  display: flex;
+  align-items: end;
+  gap: 8px;
+}
+#reviews
+  .review-container
+  .star-ratings
+  .full-review
+  .single-star
+  .count-reviews
+  .rating-count {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0f172a;
+}
+#reviews
+  .review-container
+  .star-ratings
+  .full-review
+  .single-star
+  .count-reviews
+  .total-review {
+  font-size: 14px;
+  font-weight: 500;
+  color: #334155;
+}
+#reviews .review-container .rev-middle {
+  display: flex;
+}
+#reviews .review-container .star-ratings .calculate-review .star-flex {
+  display: flex;
+  gap: 8px;
+  padding-bottom: 5px;
+}
+#reviews .review-container .star-ratings .calculate-review .percent-rev {
+  font-size: 14px;
+  font-weight: 400;
+  color: #334155;
+}
+#reviews .review-container .detailed-review .border-rev {
+  display: flex;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+#reviews .review-container .detailed-review .user-flex {
+  display: flex;
+  width: 100%;
+  gap: 8px;
+  height: fit-content;
+  align-items: center;
+}
+
+#reviews .review-container .detailed-review .rev-user-wrapper {
+  width: 60px;
+}
+#reviews .review-container .detailed-review .total-five {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f172a;
+}
+#reviews .review-container .detailed-review .rev-user-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f172a;
+}
+#reviews .review-container .detailed-review .total-rev-star {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding-bottom: 10px;
+}
+#reviews .review-container .detailed-review .date {
+  font-size: 14px;
+  font-weight: 400;
+  color: #334155;
+}
+#reviews .review-container .detailed-review .rev-description p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #334155;
+}
+#reviews .review-container .view-more-rev {
+  background: transparent;
+  border: 1px solid #0f172a;
+  width: fit-content;
+  padding: 10px 24px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  color: #0f172a;
+  font-size: 14px;
+  font-weight: 500;
+}
+#reviews .review-container .view-more-rev button {
+  cursor: pointer;
+}
+
+/* About us */
+#about-us {
+  background: #f8fafc;
+}
+#about-us .about-container .customer-review {
+  padding: 65px 0;
+}
+#about-us .about-container .customer-review .top-sect {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+#about-us .about-container .customer-review .top-sect .left-sect {
+  font-size: 24px;
+  font-weight: 600;
+  color: #0f172a;
+}
+#about-us .about-container .customer-review .top-sect .right-sect {
+  display: flex;
+  gap: 24px;
+}
+#about-us .about-container .customer-review .top-sect .right-sect .paginator {
+  background: #94a3b8;
+  border: 1px solid #94a3b8;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#about-us .about-container .customer-review .bottom-sect {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+#about-us .about-container .customer-review .bottom-sect .card-reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #e0f2fe;
+  border-radius: 8px;
+  padding: 16px;
+  cursor: pointer;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), -1px -1px 2px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+#about-us .about-container .customer-review .bottom-sect .card-reviews.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+#about-us
+  .about-container
+  .customer-review
+  .bottom-sect
+  .card-reviews
+  .quote-wrapper
+  .quote-icons {
+  width: 35px;
+}
+#about-us .about-container .customer-review .bottom-sect .card-reviews .review {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 15px 0;
+}
+#about-us
+  .about-container
+  .customer-review
+  .bottom-sect
+  .card-reviews
+  .designer
+  .user-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#about-us
+  .about-container
+  .customer-review
+  .bottom-sect
+  .card-reviews
+  .designer
+  .user-wrapper
+  .user-icon {
+  width: 50px;
+}
+#about-us
+  .about-container
+  .customer-review
+  .bottom-sect
+  .card-reviews
+  .designer
+  .designer-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+#about-us
+  .about-container
+  .customer-review
+  .bottom-sect
+  .card-reviews
+  .designer
+  .designer-skill {
+  font-size: 14px;
+  font-weight: 400;
+  color: #334155;
+}
+
+/* Promotion */
+#promotion {
+  margin: 65px 0;
+}
+#promotion .promo-container .promo-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 120px;
+}
+#promotion .promo-container .promo-top .model-left .model-wrapper {
+  width: 100%;
+}
+#promotion .promo-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+#promotion .promo-description {
+  font-size: 16px;
+  font-weight: 400;
+  color: #1d2939;
+  padding: 16px 0;
+}
+#promotion .promo-button {
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #000;
+  padding: 10px 24px;
+  border-radius: 8px;
+  display: flex;
+  width: fit-content;
+  background: #000;
+  gap: 6px;
+  align-items: center;
+  cursor: pointer;
+}
+#promotion .promo-start {
+  color: #fff;
+  cursor: pointer;
+}
+#promotion
+  .promo-container
+  .promo-top
+  .promo-content
+  .promo-button
+  .promo-arrow {
+  width: 16px;
+}
+#promotion .promo-container .promo-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 120px;
+}
+#promotion .promo-container .promo-bottom .model-right .model-wrapper {
+  width: 100%;
+}
+#promotion
+  .promo-container
+  .promo-bottom
+  .promo-content
+  .promo-button
+  .promo-arrow {
+  width: 16px;
+}
+
+/* Footer */
+footer {
+  background: #1e293b;
+}
+footer .footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 65px 0;
+  flex-wrap: wrap;
+}
+footer .footer-container .first-item {
+  padding-bottom: 25px;
+}
+footer .footer-container .first-item .logo-title {
+  display: flex;
+  align-items: center;
+  color: #f1f5f9;
+  font-size: 24px;
+}
+footer .footer-container .first-item .logo-title .logo-wrapper {
+  width: 34px;
+}
+footer .footer-container .item-title {
+  color: #f1f5f9;
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 15px;
+}
+footer .footer-container p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #cbd5e1;
+  padding-top: 15px;
+}
+footer .footer-container li {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #cbd5e1;
+  padding-bottom: 12px;
+}
+footer .footer-container .fourth-item .social-media {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5px;
+}
+footer .footer-container .fourth-item .social-media .social-wrapper {
+  cursor: pointer;
+  width: 28px;
+}
+footer .footer-container .fourth-item .social-media .social-wrapper img {
+  border-radius: 50%;
+}
+footer .footer-container .bg-wrapper {
+  width: 40px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  height: 40px;
+  align-items: center;
+}
+
+/* Responsive */
+@media all and (max-width: 1200px) {
+  #card {
+    position: unset;
+    padding-top: 45px;
+  }
+  #card .no-wrapper {
+    width: 100%;
+  }
+  #card .card-container .top-padding {
+    display: flex;
+    gap: 20px;
+  }
+  #spotlight .spot-container .details-middle .cat-title {
+    width: 100%;
+  }
+  #spotlight .spot-container .details-middle .cat-description {
+    width: 100%;
+  }
+  #course-description .description-container .syllabus-bottom {
+    width: 100%;
+  }
+  #course-description .description-container .details-container {
+    width: 100%;
+  }
+  #reviews .review-container .detailed-review .border-rev {
+    gap: 10px;
+  }
+  #reviews .review-container .detailed-review .rev-user-name {
+    width: 100px;
+  }
+}
+
+@media all and (max-width: 1024px) {
+}
+
+@media all and (max-width: 980px) {
+  #reviews .review-container .rev-middle {
+    flex-wrap: wrap;
+  }
+}
+
+@media all and (max-width: 768px) {
+  #card .card-container .top-padding {
+    display: block;
+  }
+  #about-us .about-container .customer-review .bottom-sect {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media all and (max-width: 640px) {
+  #spotlight .spot-container .navigate-top .home {
+    font-size: 13px;
+  }
+  #spotlight .spot-container .navigate-top .categories {
+    font-size: 13px;
+  }
+  #spotlight .spot-container .navigate-top .cat-content a {
+    font-size: 13px;
+  }
+  #spotlight .spot-container .details-middle .cat-title {
+    font-size: 34px;
+  }
+  #spotlight .spot-container .details-middle .cat-description {
+    font-size: 14px;
+  }
+  #spotlight
+    .spot-container
+    .reviews-bottom
+    .ratings-top
+    .rates-container
+    .rating {
+    font-size: 14px;
+  }
+  #spotlight
+    .spot-container
+    .reviews-bottom
+    .ratings-top
+    .rates-container
+    .rate-stars {
+    width: 80px;
+  }
+  #spotlight
+    .spot-container
+    .reviews-bottom
+    .ratings-top
+    .rates-container
+    .total-rating {
+    font-size: 13px;
+  }
+  #spotlight
+    .spot-container
+    .reviews-bottom
+    .ratings-top
+    .class-details
+    .total-hours {
+    font-size: 13px;
+    font-weight: 400;
+    color: #334155;
+  }
+  #spotlight
+    .spot-container
+    .reviews-bottom
+    .ratings-top
+    .class-details
+    .total-lectures {
+    font-size: 13px;
+  }
+  #spotlight
+    .spot-container
+    .reviews-bottom
+    .ratings-top
+    .class-details
+    .levels {
+    font-size: 13px;
+  }
+  #spotlight .spot-container .reviews-bottom .ratings-top {
+    gap: 6px;
+  }
+  #spotlight .spot-container .navigate-top {
+    gap: 10px;
+  }
+  #course-description .description-container .description-top .description {
+    font-size: 13px;
+  }
+  #course-description .description-headings {
+    font-size: 18px;
+  }
+  #course-description .description-paragraph {
+    font-size: 14px;
+  }
+  #course-description
+    .description-container
+    .details-container
+    .instructor
+    .instructor-details
+    .instructor-name {
+    font-size: 16px;
+  }
+  #course-description
+    .description-container
+    .details-container
+    .instructor
+    .instructor-details
+    .instructor-skill {
+    font-size: 14px;
+  }
+  #course-description
+    .description-container
+    .details-container
+    .instructor
+    .instructor-profile
+    .instructor-achievments
+    .achieve-wrapper
+    .achieve-details {
+    font-size: 13px;
+  }
+  #course-description
+    .description-container
+    .syllabus-bottom
+    .syllabus-grid
+    .syllabus-name {
+    font-size: 16px;
+  }
+  #course-description
+    .description-container
+    .syllabus-bottom
+    .syllabus-grid
+    .syllabus-lesson {
+    font-size: 13px;
+  }
+  #course-description
+    .description-container
+    .syllabus-bottom
+    .syllabus-grid
+    .lesson-time {
+    font-size: 13px;
+  }
+  #reviews .review-container .title-top {
+    font-size: 18px;
+  }
+  #reviews
+    .review-container
+    .star-ratings
+    .full-review
+    .single-star
+    .count-reviews
+    .rating-count {
+    font-size: 16px;
+  }
+  #reviews .review-container .review-wrapper-single {
+    width: 16px;
+  }
+
+  #reviews
+    .review-container
+    .star-ratings
+    .full-review
+    .single-star
+    .count-reviews
+    .total-review {
+    font-size: 13px;
+  }
+  #reviews .review-container .star-ratings .calculate-review .percent-rev {
+    font-size: 13px;
+  }
+  #reviews .review-container .review-wrapper {
+    width: 85px;
+  }
+  #reviews .review-container .detailed-review .rev-user-wrapper {
+    width: 45px;
+  }
+  #reviews .review-container .detailed-review .rev-user-name {
+    font-size: 16px;
+  }
+  #reviews .review-container .detailed-review .total-five {
+    font-size: 16px;
+  }
+  #reviews .review-container .detailed-review .date {
+    font-size: 13px;
+  }
+  #reviews .review-container .detailed-review .rev-description p {
+    font-size: 14px;
+  }
+  #about-us .about-container .customer-review .top-sect .left-sect {
+    font-size: 22px;
+  }
+  #about-us .about-container .customer-review .top-sect .right-sect {
+    display: flex;
+    gap: 14px;
+  }
+  #about-us
+    .about-container
+    .customer-review
+    .bottom-sect
+    .card-reviews
+    .quote-wrapper
+    .quote-icons {
+    width: 22px;
+  }
+  #about-us
+    .about-container
+    .customer-review
+    .bottom-sect
+    .card-reviews
+    .review {
+    font-size: 13px;
+  }
+  #about-us
+    .about-container
+    .customer-review
+    .bottom-sect
+    .card-reviews
+    .designer
+    .user-wrapper
+    .user-icon {
+    width: 35px;
+  }
+  #about-us
+    .about-container
+    .customer-review
+    .bottom-sect
+    .card-reviews
+    .designer
+    .designer-name {
+    font-size: 16px;
+  }
+  #about-us
+    .about-container
+    .customer-review
+    .bottom-sect
+    .card-reviews
+    .designer
+    .designer-skill {
+    font-size: 13px;
+  }
+  footer .footer-container .first-item .logo-title {
+    font-size: 22px;
+  }
+  footer .footer-container p {
+    font-size: 13px;
+  }
+  footer .footer-container .item-title {
+    font-size: 16px;
+  }
+  footer .footer-container li {
+    font-size: 13px;
+  }
+  footer .footer-container .fourth-item .social-media .social-wrapper {
+    width: 22px;
+  }
+  footer .footer-container .bg-wrapper {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media all and (max-width: 540px) {
+  #spotlight .spot-container .reviews-bottom .ratings-top {
+    display: block;
+  }
+  #spotlight .spot-container .reviews-bottom .ratings-top .separator {
+    display: none;
+  }
+  #course-description .description-container .description-top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #course-description .description-container .description-top .description {
+    width: 100%;
+  }
+  #course-description
+    .description-container
+    .syllabus-bottom
+    .syllabus-grid
+    .grid-flex {
+    display: block;
+    margin: 13px 10px;
+  }
+  #reviews .review-container .detailed-review .border-rev {
+    display: block;
+  }
+  #reviews .review-container .detailed-review .total-rev-star {
+    padding-top: 10px;
+  }
+}
+
+@media all and (max-width: 480px) {
+  #card {
+    display: none;
+  }
+  #spotlight .spot-container .navigate-top {
+    flex-wrap: wrap;
+  }
+  #about-us .about-container .customer-review .bottom-sect {
+    gap: 10px;
+  }
+  #about-us .about-container .customer-review .top-sect {
+    display: block;
+  }
+  #about-us .about-container .customer-review .top-sect .left-sect {
+    padding-bottom: 12px;
+  }
+  #about-us .about-container .customer-review .bottom-sect {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

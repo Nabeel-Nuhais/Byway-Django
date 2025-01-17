@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static '../static/css/courses.css' %}" />
+    <title>Courses</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <section class="wrapper">
+        <div class="head-container">
+          <a href="{% url 'web:index' %}" class="head-left">
+            <h1>
+              <img src="{% static '../static/images/logo.svg' %}" alt="logo" />
+            </h1>
+            <p class="logo-name">Byway</p>
+          </a>
+          <div class="head-right">
+            <div class="cart-wrapper">
+              <img src="{% static '../static/images/cart.svg' %}" alt="cart" />
+            </div>
+            <button class="login">Log in</button>
+            <button class="signup">Sign Up</button>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <!-- All courses -->
+    <section id="highlights">
+      <section class="wrapper">
+        <div class="highlight-container">
+          <div class="highlight highlight-course">
+            <div class="top-headings">
+              <h5 class="left-heading">Top Courses</h5>
+            </div>
+            <div class="course-bottom">
+              <a href="{% url 'web:single' %}" class="course-items">
+                <div class="course-image">
+                  <img src="{% static '../static/images/bg.jpg' %}" alt="course_image" />
+                </div>
+                <h5 class="course-title">Begginer's Guide to Design</h5>
+                <p class="mentor">By Rondald Richards</p>
+                <div class="star-wrapper">
+                  <h4 class="star-icons">
+                    <img src="{% static '../static/images/ratings.svg' %}" alt="star" />
+                  </h4>
+                  <p class="rating-count">(1200 Ratings)</p>
+                </div>
+                <div class="course-description">
+                  22 Total Hours. 155 Lectures. Beginner
+                </div>
+                <div class="course-rate">$149.9</div>
+              </a>
+              <div class="course-items">
+                <div class="course-image">
+                  <img src="{% static '../static/images/bg.jpg' %}" alt="course_image" />
+                </div>
+                <h5 class="course-title">Begginer's Guide to Design</h5>
+                <p class="mentor">By Rondald Richards</p>
+                <div class="star-wrapper">
+                  <h4 class="star-icons">
+                    <img src="{% static '../static/images/ratings.svg' %}" alt="star" />
+                  </h4>
+                  <p class="rating-count">(1200 Ratings)</p>
+                </div>
+                <div class="course-description">
+                  22 Total Hours. 155 Lectures. Beginner
+                </div>
+                <div class="course-rate">$149.9</div>
+              </div>
+              <div class="course-items">
+                <div class="course-image">
+                  <img src="{% static '../static/images/bg.jpg' %}" alt="course_image" />
+                </div>
+                <h5 class="course-title">Begginer's Guide to Design</h5>
+                <p class="mentor">By Rondald Richards</p>
+                <div class="star-wrapper">
+                  <h4 class="star-icons">
+                    <img src="{% static '../static/images/ratings.svg' %}" alt="star" />
+                  </h4>
+                  <p class="rating-count">(1200 Ratings)</p>
+                </div>
+                <div class="course-description">
+                  22 Total Hours. 155 Lectures. Beginner
+                </div>
+                <div class="course-rate">$149.9</div>
+              </div>
+              <div class="course-items">
+                <div class="course-image">
+                  <img src="{% static '../static/images/bg.jpg' %}" alt="course_image" />
+                </div>
+                <h5 class="course-title">Begginer's Guide to Design</h5>
+                <p class="mentor">By Rondald Richards</p>
+                <div class="star-wrapper">
+                  <h4 class="star-icons">
+                    <img src="{% static '../static/images/ratings.svg' %}" alt="star" />
+                  </h4>
+                  <p class="rating-count">(1200 Ratings)</p>
+                </div>
+                <div class="course-description">
+                  22 Total Hours. 155 Lectures. Beginner
+                </div>
+                <div class="course-rate">$149.9</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+        <!-- Footer -->
+        <footer>
+            <section class="wrapper">
+              <div class="footer-container">
+                <div class="first-item">
+                  <div class="logo-title">
+                    <h4 class="logo-wrapper">
+                      <img src="{% static '../static/images/logo.svg' %}" alt="logo" />
+                    </h4>
+                    Byway
+                  </div>
+                  <p class="first-description">
+                    Empowering learners through accessible and engaging online <br />
+                    education. Byway is a leading online learning platform dedicated
+                    to <br />
+                    providing high-quality, flexible, and affordable educational
+                    <br />
+                    experiences.
+                  </p>
+                </div>
+                <div class="second-item">
+                  <h4 class="item-title">Get Help</h4>
+                  <ul>
+                    <li>Contact Us</li>
+                    <li>Latest Articles</li>
+                    <li>FAQ</li>
+                  </ul>
+                </div>
+                <div class="third-item">
+                  <h4 class="item-title">Programs</h4>
+                  <ul>
+                    <li>Art & Design</li>
+                    <li>Business</li>
+                    <li>IT & Software</li>
+                    <li>Languages</li>
+                    <li>Programming</li>
+                  </ul>
+                </div>
+                <div class="fourth-item">
+                  <h4 class="item-title">Contact Us</h4>
+                  <ul>
+                    <li>Address: 123 Main Street, Anytown, CA 12345</li>
+                    <li>Tel: +(123) 456-7890</li>
+                    <li>Mail: bywayedu@webkul.in</li>
+                  </ul>
+                  <div class="social-media">
+                    <div class="bg-wrapper">
+                      <a href="https://www.facebook.com/" class="social-wrapper">
+                        <img src="{% static '../static/images/facebook.png' %}" alt="facebook" />
+                      </a>
+                    </div>
+                    <div class="bg-wrapper">
+                      <a href="https://github.com/" class="social-wrapper">
+                        <img src="{% static '../static/images/github.png' %}" alt="github" />
+                      </a>
+                    </div>
+                    <div class="bg-wrapper">
+                      <a href="https://www.google.com/" class="social-wrapper">
+                        <img src="{% static '../static/images/google.jpg' %}" alt="google" />
+                      </a>
+                    </div>
+                    <div class="bg-wrapper">
+                      <a href="https://x.com/" class="social-wrapper">
+                        <img src="{% static '../static/images/twitter.avif' %}" alt="twitter" />
+                      </a>
+                    </div>
+                    <div class="bg-wrapper">
+                      <a
+                        href="https://www.microsoft.com/en-in/"
+                        class="social-wrapper"
+                      >
+                        <img src="{% static '../static/images/microsoft.png' %}" alt="microsoft" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </footer>
+  </body>
+</html>

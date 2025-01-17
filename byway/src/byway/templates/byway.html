@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static '../static/css/byway.css' %}" />
+    <title>Byway</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <section class="wrapper">
+        <div class="head-container">
+          <a href="#" class="head-left">
+            <h1>
+              <img src="{% static '../static/images/logo.svg' %}" alt="logo" />
+            </h1>
+            <p class="logo-name">Byway</p>
+          </a>
+          <div class="head-right">
+            <div class="cart-wrapper">
+              <img src="{% static '../static/images/cart.svg' %}" alt="cart" />
+            </div>
+            <button class="login">Log in</button>
+            <button class="signup">Sign Up</button>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <!-- Spotlight -->
+    <section id="spotlight">
+      <section class="wrapper">
+        <div class="spot-container">
+          <div class="spot-left">
+            <h4>Unlock Your Potential with Byway</h4>
+            <p class="description">
+              Welcome to Byway, where learning knows no bounds. We believe that
+              education is the key to personal and professional growth, and
+              we're here to guide you on your journey to success.
+            </p>
+            <button class="start">Start your instructor journey</button>
+          </div>
+          <div class="spot-right">
+            <div class="dots">
+              <img src="{% static '../static/images/spot-dots-1.png' %}" alt="dots" />
+            </div>
+            <div class="circle-wrapper blue-circle">
+              <img src="{% static '../static/images/spot-model-one.png' %}" alt="Graduate" />
+            </div>
+            <div class="dots_two">
+              <img src="{% static '../static/images/spot-dots-2.jpg' %}" alt="dots" />
+            </div>
+            <div class="circle-wrapper red-circle">
+              <img
+                src="{% static '../static/images/spot-model-two.png' %}"
+                alt="Student with headphones"
+              />
+            </div>
+            <div class="diamond">
+              <img src="{% static '../static/images/diamond-spot.svg' %}" alt="diomond" />
+            </div>
+            <div class="circle-wrapper yellow-circle">
+              <img
+                src="{% static '../static/images/spot-model-three.png' %}"
+                alt="Happy student"
+              />
+            </div>
+            <div class="model_four-wrapper">
+              <img src="{% static '../static/images/spot-model-4.jpg' %}" alt="model_four" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- Courses -->
+    <section id="course-count">
+      <section class="wrapper">
+        <div class="course-container">
+          <ul>
+            <li>
+              250+
+              <p>Courses by our best mentors</p>
+            </li>
+            <li class="border"></li>
+            <li>
+              1000+
+              <p>Courses by our best mentors</p>
+            </li>
+            <li class="border"></li>
+            <li>
+              15+
+              <p>Courses by our best mentors</p>
+            </li>
+            <li class="border"></li>
+            <li>
+              2400+
+              <p>Courses by our best mentors</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </section>
+
+    <!-- Highlights -->
+    <section id="highlights">
+      <section class="wrapper">
+        <div class="highlight-container">
+          <!-- top categories -->
+          <div class="highlight">
+            <div class="top-headings">
+              <h5 class="left-heading">Top Categories</h5>
+              <a href="#" class="right-see_all">See All</a>
+            </div>
+            <div class="bottom-cards">
+              <div class="card-items">
+                <div class="astro-wrapper">
+                  <h4 class="cat-icons">
+                    <img src="{% static '../static/images/astrology.svg' %}" alt="astrology" />
+                  </h4>
+                </div>
+                <div class="cat-title">Astrology</div>
+                <div class="course-count">11 Courses</div>
+              </div>
+              <div class="card-items">
+                <div class="astro-wrapper">
+                  <h4 class="cat-icons">
+                    <img
+                      src="{% static '../static/images/devlopment.svg' %}"
+                      alt="development"
+                    />
+                  </h4>
+                </div>
+                <div class="cat-title">Development</div>
+                <div class="course-count">12 Courses</div>
+              </div>
+              <div class="card-items">
+                <div class="astro-wrapper">
+                  <h4 class="cat-icons">
+                    <img src="{% static '../static/images/marketing.svg' %}" alt="marketing" />
+                  </h4>
+                </div>
+                <div class="cat-title">Marketing</div>
+                <div class="course-count">12 Courses</div>
+              </div>
+              <div class="card-items">
+                <div class="astro-wrapper">
+                  <h4 class="cat-icons">
+                    <img src="{% static '../static/images/physics.svg' %}" alt="physics" />
+                  </h4>
+                </div>
+                <div class="cat-title">Physics</div>
+                <div class="course-count">14 Courses</div>
+              </div>
+            </div>
+          </div>
+          <!-- top courses -->
+          <div class="highlight highlight-course">
+            <div class="top-headings">
+              <h5 class="left-heading">Top Courses</h5>
+              <a href="{% url 'web:courses' %}" class="right-see_all">See All</a>
+            </div>
+            <div class="course-bottom">
+              <a href="{% url 'web:single' %}" class="course-items">
+                <div class="course-image">
+                  <img src="{% static '../static/images/bg.jpg' %}" alt="course_image" />
+                </div>
+                <h5 class="course-title">Begginer's Guide to Design</h5>
+                <p class="mentor">By Rondald Richards</p>
+                <div class="star-wrapper">
+                  <h4 class="star-icons">
+                    <img src="{% static '../static/images/ratings.svg' %}" alt="star" />
+                  </h4>
+                  <p class="rating-count">(1200 Ratings)</p>
+                </div>
+                <div class="course-description">
+                  22 Total Hours. 155 Lectures. Beginner
+                </div>
+                <div class="course-rate">$149.9</div>
+              </a>
+              <div class="course-items">
+                <div class="course-image">
+                  <img src="{% static '../static/images/bg.jpg' %}" alt="course_image" />
+                </div>
+                <h5 class="course-title">Begginer's Guide to Design</h5>
+                <p class="mentor">By Rondald Richards</p>
+                <div class="star-wrapper">
+                  <h4 class="star-icons">
+                    <img src="{% static '../static/images/ratings.svg' %}" alt="star" />
+                  </h4>
+                  <p class="rating-count">(1200 Ratings)</p>
+                </div>
+                <div class="course-description">
+                  22 Total Hours. 155 Lectures. Beginner
+                </div>
+                <div class="course-rate">$149.9</div>
+              </div>
+              <div class="course-items">
+                <div class="course-image">
+                  <img src="{% static '../static/images/bg.jpg' %}" alt="course_image" />
+                </div>
+                <h5 class="course-title">Begginer's Guide to Design</h5>
+                <p class="mentor">By Rondald Richards</p>
+                <div class="star-wrapper">
+                  <h4 class="star-icons">
+                    <img src="{% static '../static/images/ratings.svg' %}" alt="star" />
+                  </h4>
+                  <p class="rating-count">(1200 Ratings)</p>
+                </div>
+                <div class="course-description">
+                  22 Total Hours. 155 Lectures. Beginner
+                </div>
+                <div class="course-rate">$149.9</div>
+              </div>
+              <div class="course-items">
+                <div class="course-image">
+                  <img src="{% static '../static/images/bg.jpg' %}" alt="course_image" />
+                </div>
+                <h5 class="course-title">Begginer's Guide to Design</h5>
+                <p class="mentor">By Rondald Richards</p>
+                <div class="star-wrapper">
+                  <h4 class="star-icons">
+                    <img src="{% static '../static/images/ratings.svg' %}" alt="star" />
+                  </h4>
+                  <p class="rating-count">(1200 Ratings)</p>
+                </div>
+                <div class="course-description">
+                  22 Total Hours. 155 Lectures. Beginner
+                </div>
+                <div class="course-rate">$149.9</div>
+              </div>
+            </div>
+          </div>
+          <!-- top instructors -->
+          <div class="highlight">
+            <div class="top-headings">
+              <h5 class="left-heading">Top Instructors</h5>
+              <a href="#" class="right-see_all">See All</a>
+            </div>
+            <div class="instructor-bottom">
+              <div class="instructor-items">
+                <div class="instructor-image">
+                  <img src="{% static '../static/images/model-5.jpg' %}" alt="course_image" />
+                </div>
+                <h5 class="course-title">Ronald Richards</h5>
+                <p class="instructor-skills">UI/UX Designer</p>
+                <div class="star-instructor">
+                  <h4 class="star-single">
+                    <img src="{% static '../static/images/star.svg' %}" alt="star" />
+                    <p class="instructor-rating">4.9</p>
+                  </h4>
+                  <div class="students-count">2400 Students</div>
+                </div>
+              </div>
+              <div class="instructor-items">
+                <div class="instructor-image">
+                  <img src="{% static '../static/images/model-5.jpg' %}" alt="course_image" />
+                </div>
+                <h5 class="course-title">Ronald Richards</h5>
+                <p class="instructor-skills">UI/UX Designer</p>
+                <div class="star-instructor">
+                  <h4 class="star-single">
+                    <img src="{% static '../static/images/star.svg' %}" alt="star" />
+                    <p class="instructor-rating">4.9</p>
+                  </h4>
+                  <div class="students-count">2400 Students</div>
+                </div>
+              </div>
+              <div class="instructor-items">
+                <div class="instructor-image">
+                  <img src="{% static '../static/images/model-5.jpg' %}" alt="course_image" />
+                </div>
+                <h5 class="course-title">Ronald Richards</h5>
+                <p class="instructor-skills">UI/UX Designer</p>
+                <div class="star-instructor">
+                  <h4 class="star-single">
+                    <img src="{% static '../static/images/star.svg' %}" alt="star" />
+                    <p class="instructor-rating">4.9</p>
+                  </h4>
+                  <div class="students-count">2400 Students</div>
+                </div>
+              </div>
+              <div class="instructor-items">
+                <div class="instructor-image">
+                  <img src="{% static '../static/images/model-5.jpg' %}" alt="course_image" />
+                </div>
+                <h5 class="course-title">Ronald Richards</h5>
+                <p class="instructor-skills">UI/UX Designer</p>
+                <div class="star-instructor">
+                  <h4 class="star-single">
+                    <img src="{% static '../static/images/star.svg' %}" alt="star" />
+                    <p class="instructor-rating">4.9</p>
+                  </h4>
+                  <div class="students-count">2400 Students</div>
+                </div>
+              </div>
+              <div class="instructor-items">
+                <div class="instructor-image">
+                  <img src="{% static '../static/images/model-5.jpg' %}" alt="course_image" />
+                </div>
+                <h5 class="course-title">Ronald Richards</h5>
+                <p class="instructor-skills">UI/UX Designer</p>
+                <div class="star-instructor">
+                  <h4 class="star-single">
+                    <img src="{% static '../static/images/star.svg' %}" alt="star" />
+                    <p class="instructor-rating">4.9</p>
+                  </h4>
+                  <div class="students-count">2400 Students</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- About us -->
+    <section id="about-us">
+      <section class="wrapper">
+        <div class="about-container">
+          <div class="customer-review">
+            <div class="top-sect">
+              <h5 class="left-sect">
+                What Our Customer Say <br />
+                About Us
+              </h5>
+              <div class="right-sect swiper-pagination">
+                <button class="paginator">
+                  <img
+                    src="{% static '../static/images/short-arrow-left.svg' %}"
+                    alt="paginator"
+                  />
+                </button>
+                <button class="paginator">
+                  <img
+                    src="{% static '../static/images/short-arrow-right.svg' %}"
+                    alt="paginator"
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="bottom-sect">
+              <!-- Card 1 -->
+              <div class="card-reviews">
+                <div class="quote-wrapper">
+                  <h4 class="quote-icons">
+                    <img src="{% static '../static/images/quotes.svg' %}" alt="quotes" />
+                  </h4>
+                </div>
+                <p class="review">
+                  "Byway's tech courses are top-notch! As someone who's always
+                  looking to stay ahead in the rapidly evolving tech world, I
+                  appreciate the up-to-date content and engaging multimedia."
+                </p>
+                <div class="designer">
+                  <div class="user-wrapper">
+                    <h4 class="user-icon">
+                      <img src="{% static '../static/images/designer.png' %}" alt="designer" />
+                    </h4>
+                    <div class="designer-info">
+                      <h5 class="designer-name">Jane Doe</h5>
+                      <p class="designer-skill">Designer</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 2 -->
+              <div class="card-reviews">
+                <div class="quote-wrapper">
+                  <h4 class="quote-icons">
+                    <img src="{% static '../static/images/quotes.svg' %}" alt="quotes" />
+                  </h4>
+                </div>
+                <p class="review">
+                  "The platform offers a perfect blend of theoretical and
+                  practical knowledge. I would highly recommend it!"
+                </p>
+                <div class="designer">
+                  <div class="user-wrapper">
+                    <h4 class="user-icon">
+                      <img src="{% static '../static/images/designer.png' %}" alt="designer" />
+                    </h4>
+                    <div class="designer-info">
+                      <h5 class="designer-name">John Smith</h5>
+                      <p class="designer-skill">Developer</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 3 -->
+              <div class="card-reviews">
+                <div class="quote-wrapper">
+                  <h4 class="quote-icons">
+                    <img src="{% static '../static/images/quotes.svg' %}" alt="quotes" />
+                  </h4>
+                </div>
+                <p class="review">
+                  "Amazing courses with excellent instructors! I’ve
+                  significantly improved my skills thanks to Byway."
+                </p>
+                <div class="designer">
+                  <div class="user-wrapper">
+                    <h4 class="user-icon">
+                      <img src="{% static '../static/images/designer.png' %}" alt="designer" />
+                    </h4>
+                    <div class="designer-info">
+                      <h5 class="designer-name">Anna Lee</h5>
+                      <p class="designer-skill">Product Manager</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 4 -->
+              <div class="card-reviews">
+                <div class="quote-wrapper">
+                  <h4 class="quote-icons">
+                    <img src="{% static '../static/images/quotes.svg' %}" alt="quotes" />
+                  </h4>
+                </div>
+                <p class="review">
+                  "Byway is a game-changer for anyone in tech. The quality of
+                  content and structure is top-notch."
+                </p>
+                <div class="designer">
+                  <div class="user-wrapper">
+                    <h4 class="user-icon">
+                      <img src="{% static '../static/images/designer.png' %}" alt="designer" />
+                    </h4>
+                    <div class="designer-info">
+                      <h5 class="designer-name">Emily Clark</h5>
+                      <p class="designer-skill">UX Designer</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 5 -->
+              <div class="card-reviews">
+                <div class="quote-wrapper">
+                  <h4 class="quote-icons">
+                    <img src="{% static '../static/images/quotes.svg' %}" alt="quotes" />
+                  </h4>
+                </div>
+                <p class="review">
+                  "Highly recommended! I’ve gained so much value from Byway’s
+                  courses."
+                </p>
+                <div class="designer">
+                  <div class="user-wrapper">
+                    <h4 class="user-icon">
+                      <img src="{% static '../static/images/designer.png' %}" alt="designer" />
+                    </h4>
+                    <div class="designer-info">
+                      <h5 class="designer-name">Mike Johnson</h5>
+                      <p class="designer-skill">Marketer</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 6 -->
+              <div class="card-reviews">
+                <div class="quote-wrapper">
+                  <h4 class="quote-icons">
+                    <img src="{% static '../static/images/quotes.svg' %}" alt="quotes" />
+                  </h4>
+                </div>
+                <p class="review">
+                  "The interactive content is my favorite! I learn better this
+                  way. Great job!"
+                </p>
+                <div class="designer">
+                  <div class="user-wrapper">
+                    <h4 class="user-icon">
+                      <img src="{% static '../static/images/designer.png' %}" alt="designer" />
+                    </h4>
+                    <div class="designer-info">
+                      <h5 class="designer-name">Sophia Brown</h5>
+                      <p class="designer-skill">Data Analyst</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- Promo Section -->
+    <section id="promotion">
+      <section class="wrapper">
+        <div class="promo-container">
+          <div class="promo-top">
+            <div class="model-left">
+              <h4 class="model-wrapper">
+                <img src="{% static '../static/images/model-female.png' %}" alt="model" />
+              </h4>
+            </div>
+            <div class="promo-content">
+              <h4 class="promo-title">Become an Instructor</h4>
+              <p class="promo-description">
+                Instructors from around the world teach millions of students on
+                Byway. We provide the tools and skills to teach what you love.
+              </p>
+              <div class="promo-button">
+                <button class="promo-start">
+                  Start Your Instructor Journey
+                </button>
+                <div class="promo-arrow">
+                  <img src="{% static '../static/images/arrow-right.svg' %}" alt="arrow" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="promo-bottom">
+            <div class="promo-content">
+              <h4 class="promo-title">Transform your life through education</h4>
+              <p class="promo-description">
+                Learners around the world are launching new careers, advancing
+                in their fields, and enriching their lives.
+              </p>
+              <div class="promo-button">
+                <button class="promo-start">Checkout Courses</button>
+                <div class="promo-arrow">
+                  <img src="{% static '../static/images/arrow-right.svg' %}" alt="arrow" />
+                </div>
+              </div>
+            </div>
+            <div class="model-right">
+              <h4 class="model-wrapper">
+                <img src="{% static '../static/images/model-male.png' %}" alt="model" />
+              </h4>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <section class="wrapper">
+        <div class="footer-container">
+          <div class="first-item">
+            <div class="logo-title">
+              <h4 class="logo-wrapper">
+                <img src="{% static '../static/images/logo.svg' %}" alt="logo" />
+              </h4>
+              Byway
+            </div>
+            <p class="first-description">
+              Empowering learners through accessible and engaging online <br />
+              education. Byway is a leading online learning platform dedicated
+              to <br />
+              providing high-quality, flexible, and affordable educational
+              <br />
+              experiences.
+            </p>
+          </div>
+          <div class="second-item">
+            <h4 class="item-title">Get Help</h4>
+            <ul>
+              <li>Contact Us</li>
+              <li>Latest Articles</li>
+              <li>FAQ</li>
+            </ul>
+          </div>
+          <div class="third-item">
+            <h4 class="item-title">Programs</h4>
+            <ul>
+              <li>Art & Design</li>
+              <li>Business</li>
+              <li>IT & Software</li>
+              <li>Languages</li>
+              <li>Programming</li>
+            </ul>
+          </div>
+          <div class="fourth-item">
+            <h4 class="item-title">Contact Us</h4>
+            <ul>
+              <li>Address: 123 Main Street, Anytown, CA 12345</li>
+              <li>Tel: +(123) 456-7890</li>
+              <li>Mail: bywayedu@webkul.in</li>
+            </ul>
+            <div class="social-media">
+              <div class="bg-wrapper">
+                <a href="https://www.facebook.com/" class="social-wrapper">
+                  <img src="{% static '../static/images/facebook.png' %}" alt="facebook" />
+                </a>
+              </div>
+              <div class="bg-wrapper">
+                <a href="https://github.com/" class="social-wrapper">
+                  <img src="{% static '../static/images/github.png' %}" alt="github" />
+                </a>
+              </div>
+              <div class="bg-wrapper">
+                <a href="https://www.google.com/" class="social-wrapper">
+                  <img src="{% static '../static/images/google.jpg' %}" alt="google" />
+                </a>
+              </div>
+              <div class="bg-wrapper">
+                <a href="https://x.com/" class="social-wrapper">
+                  <img src="{% static '../static/images/twitter.avif' %}" alt="twitter" />
+                </a>
+              </div>
+              <div class="bg-wrapper">
+                <a
+                  href="https://www.microsoft.com/en-in/"
+                  class="social-wrapper"
+                >
+                  <img src="{% static '../static/images/microsoft.png' %}" alt="microsoft" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+    <!-- Linking js -->
+    <script src="{% static '../static/js/index.js' %}"></script>
+  </body>
+</html>

@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static '../static/css/single.css' %}" />
+    <title>Single page</title>
+  </head>
+  <body>
+    <section id="main-container">
+      <!-- Header -->
+      <header>
+        <section class="wrapper">
+          <div class="head-container">
+            <a href="{% url 'web:index' %}" class="head-left">
+              <h1>
+                <img src="{% static '../static/images/logo.svg' %}" alt="logo" />
+              </h1>
+              <p class="logo-name">Byway</p>
+            </a>
+            <div class="head-right">
+              <div class="wishlist-wrapper">
+                <img src="{% static '../static/images/wishlist.svg' %}" alt="wishlist" />
+              </div>
+              <div class="cart-wrapper">
+                <img src="{% static '../static/images/cart.svg' %}" alt="cart" />
+              </div>
+              <div class="bell-wrapper">
+                <img src="{% static '../static/images/bell.svg' %}" alt="bell" />
+              </div>
+              <div class="user-border">
+                <h4 class="user-wrapper">
+                  <img src="{% static '../static/images/user.svg' %}" alt="user" />
+                </h4>
+              </div>
+            </div>
+          </div>
+        </section>
+      </header>
+
+      <!-- Spotlight -->
+      <section id="spotlight">
+        <section class="wrapper">
+          <div class="spot-container">
+            <div class="navigate-top">
+              <div class="home">Home</div>
+              <div class="right-arrow">
+                <img
+                  src="{% static '../static/images/short-arrow-right-black.svg' %}"
+                  alt="arrow"
+                />
+              </div>
+              <div class="categories">Categories</div>
+              <div class="right-arrow">
+                <img
+                  src="{% static '../static/images/short-arrow-right-black.svg' %}"
+                  alt="arrow"
+                />
+              </div>
+              <div class="cat-content">
+                <a href="#"> Introduction to User Experience Design </a>
+              </div>
+            </div>
+            <div class="details-middle">
+              <h3 class="cat-title">Introduction to User Experience Design</h3>
+              <p class="cat-description">
+                This course is meticulously crafted to provide you with a
+                foundational understanding of the principles, methodologies, and
+                tools that drive exceptional user experiences in the digital
+                landscape.
+              </p>
+            </div>
+            <div class="reviews-bottom">
+              <div class="ratings-top">
+                <div class="rates-container">
+                  <div class="rating">4.6</div>
+                  <div class="rate-stars">
+                    <img src="{% static '../static/images/ratings.svg' %}" alt="rating" />
+                  </div>
+                  <div class="total-rating">(651651 rating)</div>
+                </div>
+                <div class="separator">|</div>
+                <div class="class-details">
+                  <div class="total-hours">22 Total Hours.</div>
+                  <div class="total-lectures">155 Lectures.</div>
+                  <div class="levels">All levels</div>
+                </div>
+              </div>
+              <div class="autor-middle">
+                <div class="author-icon">
+                  <h4 class="author-wrapper">
+                    <img src="{% static '../static/images/author.svg' %}" alt="author" />
+                  </h4>
+                </div>
+                <div class="creator-name">
+                  Created by
+                  <a href="#" class="author-name">Rondal Richards</a>
+                </div>
+              </div>
+              <div class="author-languages">
+                <div class="language-wrapper">
+                  <img src="{% static '../static/images/language.svg' %}" alt="language" />
+                </div>
+                <div class="language-one">English,</div>
+                <div class="language-two">Spanish,</div>
+                <div class="language-three">Italian,</div>
+                <div class="language-four">German</div>
+              </div>
+            </div>
+            <!-- The card -->
+            <section id="card">
+              <section class="wrapper no-wrapper">
+                <div class="card-container">
+                  <div class="top-padding">
+                    <div class="image-top">
+                      <img src="{% static '../static/images/card-image.png' %}" alt="card" />
+                    </div>
+                    <div class="content-middle">
+                      <div class="course-rate">
+                        <h3 class="offer-price">$49.5</h3>
+                        <h5 class="old-price">$99.5</h5>
+                        <h4 class="offer-percentage">50% Off</h4>
+                      </div>
+                      <div class="course-buy">
+                        <button class="add-to">Add To Cart</button>
+                        <button class="buy-now">Buy Now</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-bottom">
+                    <div class="bottom-padding">
+                      <p class="share-text">Share</p>
+                      <div class="social-media">
+                        <div class="bg-wrapper">
+                          <a
+                            href="https://www.facebook.com/"
+                            class="social-wrapper"
+                          >
+                            <img
+                              src="{% static '../static/images/facebook.png' %}"
+                              alt="facebook"
+                            />
+                          </a>
+                        </div>
+                        <div class="bg-wrapper">
+                          <a href="https://github.com/" class="social-wrapper">
+                            <img
+                              src="{% static '../static/images/github.png' %}"
+                              alt="github"
+                            />
+                          </a>
+                        </div>
+                        <div class="bg-wrapper">
+                          <a
+                            href="https://www.google.com/"
+                            class="social-wrapper"
+                          >
+                            <img
+                              src="{% static '../static/images/google.jpg' %}"
+                              alt="google"
+                            />
+                          </a>
+                        </div>
+                        <div class="bg-wrapper">
+                          <a href="https://x.com/" class="social-wrapper">
+                            <img
+                              src="{% static '../static/images/twitter.avif' %}"
+                              alt="twitter"
+                            />
+                          </a>
+                        </div>
+                        <div class="bg-wrapper">
+                          <a
+                            href="https://www.microsoft.com/en-in/"
+                            class="social-wrapper"
+                          >
+                            <img
+                              src="{% static '../static/images/microsoft.png' %}"
+                              alt="microsoft"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </section>
+          </div>
+        </section>
+      </section>
+
+      <!-- Course Description -->
+      <section id="course-description">
+        <section class="wrapper">
+          <div class="description-container">
+            <div class="description-top">
+              <div class="description">Description</div>
+              <div class="description">Instructor</div>
+              <div class="description">Syllabus</div>
+              <div class="description">Reviews</div>
+            </div>
+            <div class="details-container">
+              <div class="course">
+                <h4 class="description-headings">Course Description</h4>
+                <p class="description-paragraph course-padding">
+                  This interactive e-learning course will introduce you to User
+                  Experience (UX) design, the art of creating products and
+                  services that are intuitive, enjoyable, and user-friendly.
+                  Gain a solid foundation in UX principles and learn to apply
+                  them in real-world scenarios through engaging modules and
+                  interactive exercises.
+                </p>
+              </div>
+              <div class="certification">
+                <h4 class="description-headings">Certification</h4>
+                <p class="description-paragraph certification-padding">
+                  At Byway, we understand the significance of formal recognition
+                  for your hard work and dedication to continuous learning. Upon
+                  successful completion of our courses, you will earn a
+                  prestigious certification that not only validates your
+                  expertise but also opens doors to new opportunities in your
+                  chosen field.
+                </p>
+              </div>
+              <div class="instructor">
+                <h4 class="description-headings instructor-padding">
+                  Instructor
+                </h4>
+                <div class="instructor-details">
+                  <a href="#" class="instructor-name">Ronald-Richards</a>
+                  <p class="instructor-skill">UI/UX Designer</p>
+                </div>
+                <div class="instructor-profile">
+                  <div class="instructor-image">
+                    <h4 class="instructor-wrapper">
+                      <img src="{% static '../static/images/author.svg' %}" alt="instructor" />
+                    </h4>
+                  </div>
+                  <div class="instructor-achievments">
+                    <div class="achieve-wrapper">
+                      <h4 class="icon-wrapper">
+                        <img
+                          src="{% static '../static/images/achive.svg' %}"
+                          alt="achievement"
+                        />
+                      </h4>
+                      <p class="achieve-details">40,445 Reviews</p>
+                    </div>
+                    <div class="achieve-wrapper cap-padding">
+                      <h4 class="icon-wrapper cap-width">
+                        <img src="{% static '../static/images/cap.svg' %}" alt="cap" />
+                      </h4>
+                      <p class="achieve-details">500 Students</p>
+                    </div>
+                    <div class="achieve-wrapper">
+                      <h4 class="icon-wrapper play-width">
+                        <img src="{% static '../static/images/play.svg' %}" alt="play" />
+                      </h4>
+                      <p class="achieve-details">15 Courses</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="profile-description">
+                  <p class="description-paragraph profile-padding">
+                    With over a decade of industry experience, Ronald brings a
+                    wealth of practical knowledge to the classroom. He has
+                    played a pivotal role in designing user-centric interfaces
+                    for renowned tech companies, ensuring seamless and engaging
+                    user experiences.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="syllabus-bottom">
+              <h4 class="description-headings syllabus-padding">Syllabus</h4>
+              <div class="syllabus-grid">
+                <div class="line-one grid-flex">
+                  <div class="down-arrow">
+                    <img src="{% static '../static/images/arrow-down.svg' %}" alt="arrow" />
+                  </div>
+                  <h5 class="syllabus-name">Introduction to UX Design</h5>
+                  <p class="syllabus-lesson">5 Lessons</p>
+                  <p class="lesson-time">1 hour</p>
+                </div>
+                <div class="border-separator"></div>
+                <div class="line-two grid-flex">
+                  <div class="down-arrow">
+                    <img src="{% static '../static/images/arrow-down.svg' %}" alt="arrow" />
+                  </div>
+                  <h5 class="syllabus-name">Basics of User-Centered Design</h5>
+                  <p class="syllabus-lesson">5 Lessons</p>
+                  <p class="lesson-time">1 hour</p>
+                </div>
+                <div class="border-separator"></div>
+                <div class="line-three grid-flex">
+                  <div class="down-arrow">
+                    <img src="{% static '../static/images/arrow-down.svg' %}" alt="arrow" />
+                  </div>
+                  <h5 class="syllabus-name">Elements of User Experience</h5>
+                  <p class="syllabus-lesson">5 Lessons</p>
+                  <p class="lesson-time">1 hour</p>
+                </div>
+                <div class="border-separator"></div>
+                <div class="line-four grid-flex">
+                  <div class="down-arrow">
+                    <img src="{% static '../static/images/arrow-down.svg' %}" alt="arrow" />
+                  </div>
+                  <h5 class="syllabus-name">Visual Design Principles</h5>
+                  <p class="syllabus-lesson">5 Lessons</p>
+                  <p class="lesson-time">1 hour</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- Reviews Section -->
+      <section id="reviews">
+        <section class="wrapper">
+          <div class="review-container">
+            <div class="title-top">Learner Reviews</div>
+            <div class="rev-middle">
+              <div class="star-ratings">
+                <div class="full-review">
+                  <div class="single-star">
+                    <h4 class="review-wrapper-single">
+                      <img src="{% static '../static/images/star.svg' %}" alt="star" />
+                    </h4>
+                    <div class="count-reviews">
+                      <h4 class="rating-count">4.6</h4>
+                      <p class="total-review">146,951 reviews</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="calculate-review">
+                  <div class="five-star star-flex">
+                    <h4 class="review-wrapper">
+                      <img src="{% static '../static/images/ratings.svg' %}" alt="star" />
+                    </h4>
+                    <p class="percent-rev">80%</p>
+                  </div>
+                  <div class="four-star star-flex">
+                    <h4 class="review-wrapper">
+                      <img src="{% static '../static/images/ratings-four.svg' %}" alt="star" />
+                    </h4>
+                    <p class="percent-rev">10%</p>
+                  </div>
+                  <div class="three-star star-flex">
+                    <h4 class="review-wrapper">
+                      <img
+                        src="{% static '../static/images/ratings-three.svg' %}"
+                        alt="star"
+                      />
+                    </h4>
+                    <p class="percent-rev">5%</p>
+                  </div>
+                  <div class="two-star star-flex">
+                    <h4 class="review-wrapper">
+                      <img src="{% static '../static/images/ratings-two.svg' %}" alt="star" />
+                    </h4>
+                    <p class="percent-rev">3%</p>
+                  </div>
+                  <div class="one-star star-flex">
+                    <h4 class="review-wrapper">
+                      <img src="{% static '../static/images/ratings-one.svg' %}" alt="star" />
+                    </h4>
+                    <p class="percent-rev">2%</p>
+                  </div>
+                </div>
+              </div>
+              <div class="detailed-review">
+                <div class="review-top border-rev">
+                  <div class="review-user user-flex">
+                    <h4 class="rev-user-wrapper">
+                      <img src="{% static '../static/images/span-6.svg' %}" alt="user" />
+                    </h4>
+                    <h4 class="rev-user-name">Mark Doe</h4>
+                  </div>
+                  <div class="the-review">
+                    <div class="total-rev-star">
+                      <h4 class="review-wrapper-single">
+                        <img src="{% static '../static/images/star.svg' %}" alt="star" />
+                      </h4>
+                      <h5 class="total-five">5</h5>
+                      <div class="review-date">
+                        <p class="date">Reviewed on 22nd March, 2024</p>
+                      </div>
+                    </div>
+                    <div class="rev-description">
+                      <p>
+                        I was initially apprehensive, having no prior design
+                        experience. But the instructor, John Doe, did an amazing
+                        job of breaking down complex concepts into easily
+                        digestible modules. The video lectures were engaging,
+                        and the real-world examples really helped solidify my
+                        understanding.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="review-middle border-rev">
+                  <div class="review-user user-flex">
+                    <h4 class="rev-user-wrapper">
+                      <img src="{% static '../static/images/span-6.svg' %}" alt="user" />
+                    </h4>
+                    <h4 class="rev-user-name">Mark Doe</h4>
+                  </div>
+                  <div class="the-review">
+                    <div class="total-rev-star">
+                      <h4 class="review-wrapper-single">
+                        <img src="{% static '../static/images/star.svg' %}" alt="star" />
+                      </h4>
+                      <h5 class="total-five">5</h5>
+                      <div class="review-date">
+                        <p class="date">Reviewed on 22nd March, 2024</p>
+                      </div>
+                    </div>
+                    <div class="rev-description">
+                      <p>
+                        I was initially apprehensive, having no prior design
+                        experience. But the instructor, John Doe, did an amazing
+                        job of breaking down complex concepts into easily
+                        digestible modules. The video lectures were engaging,
+                        and the real-world examples really helped solidify my
+                        understanding.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="review-bottom border-rev">
+                  <div class="review-user user-flex">
+                    <h4 class="rev-user-wrapper">
+                      <img src="{% static '../static/images/span-6.svg' %}" alt="user" />
+                    </h4>
+                    <h4 class="rev-user-name">Mark Doe</h4>
+                  </div>
+                  <div class="the-review">
+                    <div class="total-rev-star">
+                      <h4 class="review-wrapper-single">
+                        <img src="{% static '../static/images/star.svg' %}" alt="star" />
+                      </h4>
+                      <h5 class="total-five">5</h5>
+                      <div class="review-date">
+                        <p class="date">Reviewed on 22nd March, 2024</p>
+                      </div>
+                    </div>
+                    <div class="rev-description">
+                      <p>
+                        I was initially apprehensive, having no prior design
+                        experience. But the instructor, John Doe, did an amazing
+                        job of breaking down complex concepts into easily
+                        digestible modules. The video lectures were engaging,
+                        and the real-world examples really helped solidify my
+                        understanding.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="view-more-rev">
+                  <button class="view-more">View more Reviews</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- About us -->
+      <section id="about-us">
+        <section class="wrapper">
+          <div class="about-container">
+            <div class="customer-review">
+              <div class="top-sect">
+                <h5 class="left-sect">
+                  What Our Customer Say <br />
+                  About Us
+                </h5>
+                <div class="right-sect swiper-pagination">
+                  <button class="paginator">
+                    <img
+                      src="{% static '../static/images/short-arrow-left.svg' %}"
+                      alt="paginator"
+                    />
+                  </button>
+                  <button class="paginator">
+                    <img
+                      src="{% static '../static/images/short-arrow-right.svg' %}"
+                      alt="paginator"
+                    />
+                  </button>
+                </div>
+              </div>
+              <div class="bottom-sect">
+                <!-- Card 1 -->
+                <div class="card-reviews">
+                  <div class="quote-wrapper">
+                    <h4 class="quote-icons">
+                      <img src="{% static '../static/images/quotes.svg' %}" alt="quotes" />
+                    </h4>
+                  </div>
+                  <p class="review">
+                    "Byway's tech courses are top-notch! As someone who's always
+                    looking to stay ahead in the rapidly evolving tech world, I
+                    appreciate the up-to-date content and engaging multimedia."
+                  </p>
+                  <div class="designer">
+                    <div class="user-wrapper">
+                      <h4 class="user-icon">
+                        <img
+                          src="{% static '../static/images/designer.png' %}"
+                          alt="designer"
+                        />
+                      </h4>
+                      <div class="designer-info">
+                        <h5 class="designer-name">Jane Doe</h5>
+                        <p class="designer-skill">Designer</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="card-reviews">
+                  <div class="quote-wrapper">
+                    <h4 class="quote-icons">
+                      <img src="{% static '../static/images/quotes.svg' %}" alt="quotes" />
+                    </h4>
+                  </div>
+                  <p class="review">
+                    "The platform offers a perfect blend of theoretical and
+                    practical knowledge. I would highly recommend it!"
+                  </p>
+                  <div class="designer">
+                    <div class="user-wrapper">
+                      <h4 class="user-icon">
+                        <img
+                          src="{% static '../static/images/designer.png' %}"
+                          alt="designer"
+                        />
+                      </h4>
+                      <div class="designer-info">
+                        <h5 class="designer-name">John Smith</h5>
+                        <p class="designer-skill">Developer</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="card-reviews">
+                  <div class="quote-wrapper">
+                    <h4 class="quote-icons">
+                      <img src="{% static '../static/images/quotes.svg' %}" alt="quotes" />
+                    </h4>
+                  </div>
+                  <p class="review">
+                    "Amazing courses with excellent instructors! I’ve
+                    significantly improved my skills thanks to Byway."
+                  </p>
+                  <div class="designer">
+                    <div class="user-wrapper">
+                      <h4 class="user-icon">
+                        <img
+                          src="{% static '../static/images/designer.png' %}"
+                          alt="designer"
+                        />
+                      </h4>
+                      <div class="designer-info">
+                        <h5 class="designer-name">Anna Lee</h5>
+                        <p class="designer-skill">Product Manager</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="card-reviews">
+                  <div class="quote-wrapper">
+                    <h4 class="quote-icons">
+                      <img src="{% static '../static/images/quotes.svg' %}" alt="quotes" />
+                    </h4>
+                  </div>
+                  <p class="review">
+                    "Byway is a game-changer for anyone in tech. The quality of
+                    content and structure is top-notch."
+                  </p>
+                  <div class="designer">
+                    <div class="user-wrapper">
+                      <h4 class="user-icon">
+                        <img
+                          src="{% static '../static/images/designer.png' %}"
+                          alt="designer"
+                        />
+                      </h4>
+                      <div class="designer-info">
+                        <h5 class="designer-name">Emily Clark</h5>
+                        <p class="designer-skill">UX Designer</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="card-reviews">
+                  <div class="quote-wrapper">
+                    <h4 class="quote-icons">
+                      <img src="{% static '../static/images/quotes.svg' %}" alt="quotes" />
+                    </h4>
+                  </div>
+                  <p class="review">
+                    "Highly recommended! I’ve gained so much value from Byway’s
+                    courses."
+                  </p>
+                  <div class="designer">
+                    <div class="user-wrapper">
+                      <h4 class="user-icon">
+                        <img
+                          src="{% static '../static/images/designer.png' %}"
+                          alt="designer"
+                        />
+                      </h4>
+                      <div class="designer-info">
+                        <h5 class="designer-name">Mike Johnson</h5>
+                        <p class="designer-skill">Marketer</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="card-reviews">
+                  <div class="quote-wrapper">
+                    <h4 class="quote-icons">
+                      <img src="{% static '../static/images/quotes.svg' %}" alt="quotes" />
+                    </h4>
+                  </div>
+                  <p class="review">
+                    "The interactive content is my favorite! I learn better this
+                    way. Great job!"
+                  </p>
+                  <div class="designer">
+                    <div class="user-wrapper">
+                      <h4 class="user-icon">
+                        <img
+                          src="{% static '../static/images/designer.png' %}"
+                          alt="designer"
+                        />
+                      </h4>
+                      <div class="designer-info">
+                        <h5 class="designer-name">Sophia Brown</h5>
+                        <p class="designer-skill">Data Analyst</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <section class="wrapper">
+          <div class="footer-container">
+            <div class="first-item">
+              <div class="logo-title">
+                <h4 class="logo-wrapper">
+                  <img src="{% static '../static/images/logo.svg' %}" alt="logo" />
+                </h4>
+                Byway
+              </div>
+              <p class="first-description">
+                Empowering learners through accessible and engaging online
+                <br />
+                education. Byway is a leading online learning platform dedicated
+                to <br />
+                providing high-quality, flexible, and affordable educational
+                <br />
+                experiences.
+              </p>
+            </div>
+            <div class="second-item">
+              <h4 class="item-title">Get Help</h4>
+              <ul>
+                <li>Contact Us</li>
+                <li>Latest Articles</li>
+                <li>FAQ</li>
+              </ul>
+            </div>
+            <div class="third-item">
+              <h4 class="item-title">Programs</h4>
+              <ul>
+                <li>Art & Design</li>
+                <li>Business</li>
+                <li>IT & Software</li>
+                <li>Languages</li>
+                <li>Programming</li>
+              </ul>
+            </div>
+            <div class="fourth-item">
+              <h4 class="item-title">Contact Us</h4>
+              <ul>
+                <li>Address: 123 Main Street, Anytown, CA 12345</li>
+                <li>Tel: +(123) 456-7890</li>
+                <li>Mail: bywayedu@webkul.in</li>
+              </ul>
+              <div class="social-media">
+                <div class="bg-wrapper">
+                  <a href="https://www.facebook.com/" class="social-wrapper">
+                    <img src="{% static '../static/images/facebook.png' %}" alt="facebook" />
+                  </a>
+                </div>
+                <div class="bg-wrapper">
+                  <a href="https://github.com/" class="social-wrapper">
+                    <img src="{% static '../static/images/github.png' %}" alt="github" />
+                  </a>
+                </div>
+                <div class="bg-wrapper">
+                  <a href="https://www.google.com/" class="social-wrapper">
+                    <img src="{% static '../static/images/google.jpg' %}" alt="google" />
+                  </a>
+                </div>
+                <div class="bg-wrapper">
+                  <a href="https://x.com/" class="social-wrapper">
+                    <img src="{% static '../static/images/twitter.avif' %}" alt="twitter" />
+                  </a>
+                </div>
+                <div class="bg-wrapper">
+                  <a
+                    href="https://www.microsoft.com/en-in/"
+                    class="social-wrapper"
+                  >
+                    <img src="{% static '../static/images/microsoft.png' %}" alt="microsoft" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </footer>
+    </section>
+
+    <!-- Linking js -->
+    <script src="{% static '../static/js/single.js' %}"></script>
+  </body>
+</html>
