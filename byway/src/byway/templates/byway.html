@@ -157,98 +157,31 @@
               >
             </div>
             <div class="course-bottom">
+              {% for course in courses %}
               <a href="{% url 'web:single' %}" class="course-items">
                 <div class="course-image">
-                  <img
-                    src="{% static '../static/images/bg.jpg' %}"
-                    alt="course_image"
-                  />
+                  <img src="{{ course.image.url }}" alt="{{ course.title }}" />
                 </div>
-                <h5 class="course-title">Begginer's Guide to Design</h5>
-                <p class="mentor">By Rondald Richards</p>
+                <h5 class="course-title">{{ course.title }}</h5>
+                <p class="mentor">By {{ course.instructor }}</p>
                 <div class="star-wrapper">
-                  <h4 class="star-icons">
-                    <img
-                      src="{% static '../static/images/ratings.svg' %}"
-                      alt="star"
-                    />
+                  <h4
+                    style="display: flex; align-items: center; gap: 5px"
+                    class="star-icons"
+                  >
+                    <img src="{{ course.star_icon.url }}" alt="star-icon" />
+                    {{ course.rating }}
                   </h4>
-                  <p class="rating-count">(1200 Ratings)</p>
+                  <p class="rating-count">
+                    ({{ course.total_ratings }} Ratings)
+                  </p>
                 </div>
                 <div class="course-description">
-                  22 Total Hours. 155 Lectures. Beginner
+                  {{ course.total_hours }} Total Hours. {{course.total_lectures}} Lectures. {{ course.level }}
                 </div>
-                <div class="course-rate">$149.9</div>
+                <div class="course-rate">${{ course.price }}</div>
               </a>
-              <div class="course-items">
-                <div class="course-image">
-                  <img
-                    src="{% static '../static/images/bg.jpg' %}"
-                    alt="course_image"
-                  />
-                </div>
-                <h5 class="course-title">Begginer's Guide to Design</h5>
-                <p class="mentor">By Rondald Richards</p>
-                <div class="star-wrapper">
-                  <h4 class="star-icons">
-                    <img
-                      src="{% static '../static/images/ratings.svg' %}"
-                      alt="star"
-                    />
-                  </h4>
-                  <p class="rating-count">(1200 Ratings)</p>
-                </div>
-                <div class="course-description">
-                  22 Total Hours. 155 Lectures. Beginner
-                </div>
-                <div class="course-rate">$149.9</div>
-              </div>
-              <div class="course-items">
-                <div class="course-image">
-                  <img
-                    src="{% static '../static/images/bg.jpg' %}"
-                    alt="course_image"
-                  />
-                </div>
-                <h5 class="course-title">Begginer's Guide to Design</h5>
-                <p class="mentor">By Rondald Richards</p>
-                <div class="star-wrapper">
-                  <h4 class="star-icons">
-                    <img
-                      src="{% static '../static/images/ratings.svg' %}"
-                      alt="star"
-                    />
-                  </h4>
-                  <p class="rating-count">(1200 Ratings)</p>
-                </div>
-                <div class="course-description">
-                  22 Total Hours. 155 Lectures. Beginner
-                </div>
-                <div class="course-rate">$149.9</div>
-              </div>
-              <div class="course-items">
-                <div class="course-image">
-                  <img
-                    src="{% static '../static/images/bg.jpg' %}"
-                    alt="course_image"
-                  />
-                </div>
-                <h5 class="course-title">Begginer's Guide to Design</h5>
-                <p class="mentor">By Rondald Richards</p>
-                <div class="star-wrapper">
-                  <h4 class="star-icons">
-                    <img
-                      src="{% static '../static/images/ratings.svg' %}"
-                      alt="star"
-                    />
-                  </h4>
-                  <p class="rating-count">(1200 Ratings)</p>
-                </div>
-                <div class="course-description">
-                  22 Total Hours. 155 Lectures. Beginner
-                </div>
-                <div class="course-rate">$149.9</div>
-              </div>
+              {% endfor %}
             </div>
           </div>
           <!-- top instructors -->
@@ -258,106 +191,27 @@
               <a href="#" class="right-see_all">See All</a>
             </div>
             <div class="instructor-bottom">
+              {% for instructor in instructors %}
               <div class="instructor-items">
                 <div class="instructor-image">
                   <img
-                    src="{% static '../static/images/model-5.jpg' %}"
-                    alt="course_image"
+                    src="{{ instructor.image.url }}"
+                    alt="{{ instructor.name }}"
                   />
                 </div>
-                <h5 class="course-title">Ronald Richards</h5>
-                <p class="instructor-skills">UI/UX Designer</p>
+                <h5 class="course-title">{{ instructor.name }}</h5>
+                <p class="instructor-skills">{{ instructor.role }}</p>
                 <div class="star-instructor">
                   <h4 class="star-single">
-                    <img
-                      src="{% static '../static/images/star.svg' %}"
-                      alt="star"
-                    />
-                    <p class="instructor-rating">4.9</p>
+                    <img src="{{ instructor.single_star.url }}" alt="star" />
+                    <p class="instructor-rating">{{ instructor.rating }}</p>
                   </h4>
-                  <div class="students-count">2400 Students</div>
+                  <div class="students-count">
+                    {{ instructor.total_students }} Students
+                  </div>
                 </div>
               </div>
-              <div class="instructor-items">
-                <div class="instructor-image">
-                  <img
-                    src="{% static '../static/images/model-5.jpg' %}"
-                    alt="course_image"
-                  />
-                </div>
-                <h5 class="course-title">Ronald Richards</h5>
-                <p class="instructor-skills">UI/UX Designer</p>
-                <div class="star-instructor">
-                  <h4 class="star-single">
-                    <img
-                      src="{% static '../static/images/star.svg' %}"
-                      alt="star"
-                    />
-                    <p class="instructor-rating">4.9</p>
-                  </h4>
-                  <div class="students-count">2400 Students</div>
-                </div>
-              </div>
-              <div class="instructor-items">
-                <div class="instructor-image">
-                  <img
-                    src="{% static '../static/images/model-5.jpg' %}"
-                    alt="course_image"
-                  />
-                </div>
-                <h5 class="course-title">Ronald Richards</h5>
-                <p class="instructor-skills">UI/UX Designer</p>
-                <div class="star-instructor">
-                  <h4 class="star-single">
-                    <img
-                      src="{% static '../static/images/star.svg' %}"
-                      alt="star"
-                    />
-                    <p class="instructor-rating">4.9</p>
-                  </h4>
-                  <div class="students-count">2400 Students</div>
-                </div>
-              </div>
-              <div class="instructor-items">
-                <div class="instructor-image">
-                  <img
-                    src="{% static '../static/images/model-5.jpg' %}"
-                    alt="course_image"
-                  />
-                </div>
-                <h5 class="course-title">Ronald Richards</h5>
-                <p class="instructor-skills">UI/UX Designer</p>
-                <div class="star-instructor">
-                  <h4 class="star-single">
-                    <img
-                      src="{% static '../static/images/star.svg' %}"
-                      alt="star"
-                    />
-                    <p class="instructor-rating">4.9</p>
-                  </h4>
-                  <div class="students-count">2400 Students</div>
-                </div>
-              </div>
-              <div class="instructor-items">
-                <div class="instructor-image">
-                  <img
-                    src="{% static '../static/images/model-5.jpg' %}"
-                    alt="course_image"
-                  />
-                </div>
-                <h5 class="course-title">Ronald Richards</h5>
-                <p class="instructor-skills">UI/UX Designer</p>
-                <div class="star-instructor">
-                  <h4 class="star-single">
-                    <img
-                      src="{% static '../static/images/star.svg' %}"
-                      alt="star"
-                    />
-                    <p class="instructor-rating">4.9</p>
-                  </h4>
-                  <div class="students-count">2400 Students</div>
-                </div>
-              </div>
+              {% endfor %}
             </div>
           </div>
         </div>
@@ -390,7 +244,7 @@
               </div>
             </div>
             <div class="bottom-sect">
-              <!-- Card 1 -->
+              {% for testimonial in testimonials %}
               <div class="card-reviews">
                 <div class="quote-wrapper">
                   <h4 class="quote-icons">
@@ -401,170 +255,24 @@
                   </h4>
                 </div>
                 <p class="review">
-                  "Byway's tech courses are top-notch! As someone who's always
-                  looking to stay ahead in the rapidly evolving tech world, I
-                  appreciate the up-to-date content and engaging multimedia."
+                  "{{ testimonial.quote }}"
                 </p>
                 <div class="designer">
                   <div class="user-wrapper">
                     <h4 class="user-icon">
                       <img
-                        src="{% static '../static/images/designer.png' %}"
+                        src="{{ testimonial.image.url }}"
                         alt="designer"
                       />
                     </h4>
                     <div class="designer-info">
-                      <h5 class="designer-name">Jane Doe</h5>
-                      <p class="designer-skill">Designer</p>
+                      <h5 class="designer-name">{{ testimonial.name }}</h5>
+                      <p class="designer-skill">{{ testimonial.role }}</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Card 2 -->
-              <div class="card-reviews">
-                <div class="quote-wrapper">
-                  <h4 class="quote-icons">
-                    <img
-                      src="{% static '../static/images/quotes.svg' %}"
-                      alt="quotes"
-                    />
-                  </h4>
-                </div>
-                <p class="review">
-                  "The platform offers a perfect blend of theoretical and
-                  practical knowledge. I would highly recommend it!"
-                </p>
-                <div class="designer">
-                  <div class="user-wrapper">
-                    <h4 class="user-icon">
-                      <img
-                        src="{% static '../static/images/designer.png' %}"
-                        alt="designer"
-                      />
-                    </h4>
-                    <div class="designer-info">
-                      <h5 class="designer-name">John Smith</h5>
-                      <p class="designer-skill">Developer</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 3 -->
-              <div class="card-reviews">
-                <div class="quote-wrapper">
-                  <h4 class="quote-icons">
-                    <img
-                      src="{% static '../static/images/quotes.svg' %}"
-                      alt="quotes"
-                    />
-                  </h4>
-                </div>
-                <p class="review">
-                  "Amazing courses with excellent instructors! I’ve
-                  significantly improved my skills thanks to Byway."
-                </p>
-                <div class="designer">
-                  <div class="user-wrapper">
-                    <h4 class="user-icon">
-                      <img
-                        src="{% static '../static/images/designer.png' %}"
-                        alt="designer"
-                      />
-                    </h4>
-                    <div class="designer-info">
-                      <h5 class="designer-name">Anna Lee</h5>
-                      <p class="designer-skill">Product Manager</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 4 -->
-              <div class="card-reviews">
-                <div class="quote-wrapper">
-                  <h4 class="quote-icons">
-                    <img
-                      src="{% static '../static/images/quotes.svg' %}"
-                      alt="quotes"
-                    />
-                  </h4>
-                </div>
-                <p class="review">
-                  "Byway is a game-changer for anyone in tech. The quality of
-                  content and structure is top-notch."
-                </p>
-                <div class="designer">
-                  <div class="user-wrapper">
-                    <h4 class="user-icon">
-                      <img
-                        src="{% static '../static/images/designer.png' %}"
-                        alt="designer"
-                      />
-                    </h4>
-                    <div class="designer-info">
-                      <h5 class="designer-name">Emily Clark</h5>
-                      <p class="designer-skill">UX Designer</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 5 -->
-              <div class="card-reviews">
-                <div class="quote-wrapper">
-                  <h4 class="quote-icons">
-                    <img
-                      src="{% static '../static/images/quotes.svg' %}"
-                      alt="quotes"
-                    />
-                  </h4>
-                </div>
-                <p class="review">
-                  "Highly recommended! I’ve gained so much value from Byway’s
-                  courses."
-                </p>
-                <div class="designer">
-                  <div class="user-wrapper">
-                    <h4 class="user-icon">
-                      <img
-                        src="{% static '../static/images/designer.png' %}"
-                        alt="designer"
-                      />
-                    </h4>
-                    <div class="designer-info">
-                      <h5 class="designer-name">Mike Johnson</h5>
-                      <p class="designer-skill">Marketer</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 6 -->
-              <div class="card-reviews">
-                <div class="quote-wrapper">
-                  <h4 class="quote-icons">
-                    <img
-                      src="{% static '../static/images/quotes.svg' %}"
-                      alt="quotes"
-                    />
-                  </h4>
-                </div>
-                <p class="review">
-                  "The interactive content is my favorite! I learn better this
-                  way. Great job!"
-                </p>
-                <div class="designer">
-                  <div class="user-wrapper">
-                    <h4 class="user-icon">
-                      <img
-                        src="{% static '../static/images/designer.png' %}"
-                        alt="designer"
-                      />
-                    </h4>
-                    <div class="designer-info">
-                      <h5 class="designer-name">Sophia Brown</h5>
-                      <p class="designer-skill">Data Analyst</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              {% endfor %}
             </div>
           </div>
         </div>
