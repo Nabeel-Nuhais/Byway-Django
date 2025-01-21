@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Category, Course, Instructor, Testimonial
+from .models import Category, Course, Instructor, Testimonial, Review
 
 
 def byway(request):
@@ -39,11 +39,28 @@ def courses(request):
 
 
 def single_course(request, course_id):
+    # Retrieve the course or return a 404 error if not found
     course = get_object_or_404(Course, id=course_id)
+    
+    # Retrieve related reviews based on the course
+    reviews = Review.objects.filter(course=course)  # Adjust this if your model names differ
+
+    # Fetch all testimonials or limit them
     testimonials = Testimonial.objects.all()
 
+    # Fetch the instructor associated with the course, handling potential null values gracefully
+    instructor = Instructor.objects.filter(name=course.instructor).first() if course.instructor else None
+
+    # Prepare the context for the template
     context = {
         'course': course,
+        'reviews': reviews,
         'testimonials': testimonials,
+        'instructor': instructor,
     }
+
+    # Render the template with the context
     return render(request, 'single.html', context)
+
+
+

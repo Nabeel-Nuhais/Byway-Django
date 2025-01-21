@@ -62,91 +62,89 @@
               <div class="home">Home</div>
               <div class="right-arrow">
                 <img
-                  src="{% static '../static/images/short-arrow-right-black.svg' %}"
+                  src="{% static 'images/short-arrow-right-black.svg' %}"
                   alt="arrow"
                 />
               </div>
               <div class="categories">Categories</div>
               <div class="right-arrow">
                 <img
-                  src="{% static '../static/images/short-arrow-right-black.svg' %}"
+                  src="{% static 'images/short-arrow-right-black.svg' %}"
                   alt="arrow"
                 />
               </div>
               <div class="cat-content">
-                <a href="#"> Introduction to User Experience Design </a>
+                <a href="#">{{ course.title }}</a>
               </div>
             </div>
+
             <div class="details-middle">
-              <h3 class="cat-title">Introduction to User Experience Design</h3>
-              <p class="cat-description">
-                This course is meticulously crafted to provide you with a
-                foundational understanding of the principles, methodologies, and
-                tools that drive exceptional user experiences in the digital
-                landscape.
-              </p>
+              <h3 class="cat-title">{{ course.title }}</h3>
+              <p class="cat-description">{{ course.description }}</p>
             </div>
+
             <div class="reviews-bottom">
               <div class="ratings-top">
                 <div class="rates-container">
-                  <div class="rating">4.6</div>
+                  <div class="rating">{{ course.rating }}</div>
                   <div class="rate-stars">
-                    <img
-                      src="{% static '../static/images/ratings.svg' %}"
-                      alt="rating"
-                    />
+                    <img src="{% static 'images/ratings.svg' %}" alt="rating" />
                   </div>
-                  <div class="total-rating">(651651 rating)</div>
+                  <div class="total-rating">
+                    ({{ course.total_ratings }} ratings)
+                  </div>
                 </div>
                 <div class="separator">|</div>
                 <div class="class-details">
-                  <div class="total-hours">22 Total Hours.</div>
-                  <div class="total-lectures">155 Lectures.</div>
-                  <div class="levels">All levels</div>
+                  <div class="total-hours">
+                    {{ course.total_hours }} Total Hours.
+                  </div>
+                  <div class="total-lectures">
+                    {{ course.total_lectures }} Lectures.
+                  </div>
+                  <div class="levels">{{ course.level }}</div>
                 </div>
               </div>
+
               <div class="autor-middle">
                 <div class="author-icon">
                   <h4 class="author-wrapper">
-                    <img
-                      src="{% static '../static/images/author.svg' %}"
-                      alt="author"
-                    />
+                    <img src="{{ course.author_icon.url }}" alt="author" />
                   </h4>
                 </div>
                 <div class="creator-name">
                   Created by
-                  <a href="#" class="author-name">Rondal Richards</a>
+                  <a href="#" class="author-name">{{ course.instructor }}</a>
                 </div>
               </div>
+
               <div class="author-languages">
                 <div class="language-wrapper">
                   <img
-                    src="{% static '../static/images/language.svg' %}"
+                    src="{% static 'images/language.svg' %}"
                     alt="language"
                   />
                 </div>
-                <div class="language-one">English,</div>
-                <div class="language-two">Spanish,</div>
-                <div class="language-three">Italian,</div>
-                <div class="language-four">German</div>
+                {% for language in course.languages.all %}
+                <div class="language-item">{{ language.name }}</div>
+                {% if not forloop.last %}, {% endif %} {% endfor %}
               </div>
             </div>
+
             <!-- The card -->
             <section id="card">
               <section class="wrapper no-wrapper">
                 <div class="card-container">
                   <div class="top-padding">
                     <div class="image-top">
-                      <img
-                        src="{% static '../static/images/card-image.png' %}"
-                        alt="card"
-                      />
+                      <img src="{{ course.image.url }}" alt="course image" />
                     </div>
                     <div class="content-middle">
                       <div class="course-rate">
-                        <h3 class="offer-price">$49.5</h3>
-                        <h5 class="old-price">$99.5</h5>
+                        <h3 class="offer-price">
+                          ${{ course.discounted_price }}
+                        </h3>
+                        <h5 class="old-price">${{ course.price }}</h5>
                         <h4 class="offer-percentage">50% Off</h4>
                       </div>
                       <div class="course-buy">
@@ -155,6 +153,7 @@
                       </div>
                     </div>
                   </div>
+
                   <div class="content-bottom">
                     <div class="bottom-padding">
                       <p class="share-text">Share</p>
@@ -165,7 +164,7 @@
                             class="social-wrapper"
                           >
                             <img
-                              src="{% static '../static/images/facebook.png' %}"
+                              src="{% static 'images/facebook.png' %}"
                               alt="facebook"
                             />
                           </a>
@@ -173,7 +172,7 @@
                         <div class="bg-wrapper">
                           <a href="https://github.com/" class="social-wrapper">
                             <img
-                              src="{% static '../static/images/github.png' %}"
+                              src="{% static 'images/github.png' %}"
                               alt="github"
                             />
                           </a>
@@ -184,7 +183,7 @@
                             class="social-wrapper"
                           >
                             <img
-                              src="{% static '../static/images/google.jpg' %}"
+                              src="{% static 'images/google.jpg' %}"
                               alt="google"
                             />
                           </a>
@@ -192,7 +191,7 @@
                         <div class="bg-wrapper">
                           <a href="https://x.com/" class="social-wrapper">
                             <img
-                              src="{% static '../static/images/twitter.avif' %}"
+                              src="{% static 'images/twitter.avif' %}"
                               alt="twitter"
                             />
                           </a>
@@ -203,7 +202,7 @@
                             class="social-wrapper"
                           >
                             <img
-                              src="{% static '../static/images/microsoft.png' %}"
+                              src="{% static 'images/microsoft.png' %}"
                               alt="microsoft"
                             />
                           </a>
@@ -232,23 +231,13 @@
               <div class="course">
                 <h4 class="description-headings">Course Description</h4>
                 <p class="description-paragraph course-padding">
-                  This interactive e-learning course will introduce you to User
-                  Experience (UX) design, the art of creating products and
-                  services that are intuitive, enjoyable, and user-friendly.
-                  Gain a solid foundation in UX principles and learn to apply
-                  them in real-world scenarios through engaging modules and
-                  interactive exercises.
+                  {{ course.course_description }}
                 </p>
               </div>
               <div class="certification">
                 <h4 class="description-headings">Certification</h4>
                 <p class="description-paragraph certification-padding">
-                  At Byway, we understand the significance of formal recognition
-                  for your hard work and dedication to continuous learning. Upon
-                  successful completion of our courses, you will earn a
-                  prestigious certification that not only validates your
-                  expertise but also opens doors to new opportunities in your
-                  chosen field.
+                  {{ course.certification }}
                 </p>
               </div>
               <div class="instructor">
@@ -256,14 +245,16 @@
                   Instructor
                 </h4>
                 <div class="instructor-details">
-                  <a href="#" class="instructor-name">Ronald-Richards</a>
-                  <p class="instructor-skill">UI/UX Designer</p>
+                  <a href="#" class="instructor-name"
+                    >{{ course.instructor }}</a
+                  >
+                  <p class="instructor-skill">{{ course.role }}</p>
                 </div>
                 <div class="instructor-profile">
                   <div class="instructor-image">
                     <h4 class="instructor-wrapper">
                       <img
-                        src="{% static '../static/images/author.svg' %}"
+                        src="{{ course.author_icon.url }}"
                         alt="instructor"
                       />
                     </h4>
@@ -276,7 +267,9 @@
                           alt="achievement"
                         />
                       </h4>
-                      <p class="achieve-details">40,445 Reviews</p>
+                      <p class="achieve-details">
+                        {{ course.reviews }} Reviews
+                      </p>
                     </div>
                     <div class="achieve-wrapper cap-padding">
                       <h4 class="icon-wrapper cap-width">
@@ -285,7 +278,9 @@
                           alt="cap"
                         />
                       </h4>
-                      <p class="achieve-details">500 Students</p>
+                      <p class="achieve-details">
+                        {{ course.total_students }} Students
+                      </p>
                     </div>
                     <div class="achieve-wrapper">
                       <h4 class="icon-wrapper play-width">
@@ -294,17 +289,15 @@
                           alt="play"
                         />
                       </h4>
-                      <p class="achieve-details">15 Courses</p>
+                      <p class="achieve-details">
+                        {{ course.total_courses }} Courses
+                      </p>
                     </div>
                   </div>
                 </div>
                 <div class="profile-description">
                   <p class="description-paragraph profile-padding">
-                    With over a decade of industry experience, Ronald brings a
-                    wealth of practical knowledge to the classroom. He has
-                    played a pivotal role in designing user-centric interfaces
-                    for renowned tech companies, ensuring seamless and engaging
-                    user experiences.
+                    {{ instructor.bio }}
                   </p>
                 </div>
               </div>
@@ -312,53 +305,20 @@
             <div class="syllabus-bottom">
               <h4 class="description-headings syllabus-padding">Syllabus</h4>
               <div class="syllabus-grid">
-                <div class="line-one grid-flex">
+                {% for section in syllabus %}
+                <div class="line grid-flex">
                   <div class="down-arrow">
                     <img
                       src="{% static '../static/images/arrow-down.svg' %}"
                       alt="arrow"
                     />
                   </div>
-                  <h5 class="syllabus-name">Introduction to UX Design</h5>
-                  <p class="syllabus-lesson">5 Lessons</p>
-                  <p class="lesson-time">1 hour</p>
+                  <h5 class="syllabus-name">{{ section.title }}</h5>
+                  <p class="syllabus-lesson">{{ section.lessons }} Lessons</p>
+                  <p class="lesson-time">{{ section.duration }}</p>
                 </div>
                 <div class="border-separator"></div>
-                <div class="line-two grid-flex">
-                  <div class="down-arrow">
-                    <img
-                      src="{% static '../static/images/arrow-down.svg' %}"
-                      alt="arrow"
-                    />
-                  </div>
-                  <h5 class="syllabus-name">Basics of User-Centered Design</h5>
-                  <p class="syllabus-lesson">5 Lessons</p>
-                  <p class="lesson-time">1 hour</p>
-                </div>
-                <div class="border-separator"></div>
-                <div class="line-three grid-flex">
-                  <div class="down-arrow">
-                    <img
-                      src="{% static '../static/images/arrow-down.svg' %}"
-                      alt="arrow"
-                    />
-                  </div>
-                  <h5 class="syllabus-name">Elements of User Experience</h5>
-                  <p class="syllabus-lesson">5 Lessons</p>
-                  <p class="lesson-time">1 hour</p>
-                </div>
-                <div class="border-separator"></div>
-                <div class="line-four grid-flex">
-                  <div class="down-arrow">
-                    <img
-                      src="{% static '../static/images/arrow-down.svg' %}"
-                      alt="arrow"
-                    />
-                  </div>
-                  <h5 class="syllabus-name">Visual Design Principles</h5>
-                  <p class="syllabus-lesson">5 Lessons</p>
-                  <p class="lesson-time">1 hour</p>
-                </div>
+                {% endfor %}
               </div>
             </div>
           </div>
@@ -435,15 +395,16 @@
                 </div>
               </div>
               <div class="detailed-review">
-                <div class="review-top border-rev">
+                {% for review in reviews %}
+                <div class="review border-rev">
                   <div class="review-user user-flex">
                     <h4 class="rev-user-wrapper">
                       <img
-                        src="{% static '../static/images/span-6.svg' %}"
+                        src="{{ review.user_image.url }}"
                         alt="user"
                       />
                     </h4>
-                    <h4 class="rev-user-name">Mark Doe</h4>
+                    <h4 class="rev-user-name">{{ review.user_name }}</h4>
                   </div>
                   <div class="the-review">
                     <div class="total-rev-star">
@@ -453,93 +414,21 @@
                           alt="star"
                         />
                       </h4>
-                      <h5 class="total-five">5</h5>
+                      <h5 class="total-five">{{ review.rating }}</h5>
                       <div class="review-date">
-                        <p class="date">Reviewed on 22nd March, 2024</p>
+                        <p class="date">
+                          Reviewed on {{ review.review_date|date:"jS F, Y" }}
+                        </p>
                       </div>
                     </div>
                     <div class="rev-description">
-                      <p>
-                        I was initially apprehensive, having no prior design
-                        experience. But the instructor, John Doe, did an amazing
-                        job of breaking down complex concepts into easily
-                        digestible modules. The video lectures were engaging,
-                        and the real-world examples really helped solidify my
-                        understanding.
-                      </p>
+                      <p>{{ review.description }}</p>
                     </div>
                   </div>
                 </div>
-                <div class="review-middle border-rev">
-                  <div class="review-user user-flex">
-                    <h4 class="rev-user-wrapper">
-                      <img
-                        src="{% static '../static/images/span-6.svg' %}"
-                        alt="user"
-                      />
-                    </h4>
-                    <h4 class="rev-user-name">Mark Doe</h4>
-                  </div>
-                  <div class="the-review">
-                    <div class="total-rev-star">
-                      <h4 class="review-wrapper-single">
-                        <img
-                          src="{% static '../static/images/star.svg' %}"
-                          alt="star"
-                        />
-                      </h4>
-                      <h5 class="total-five">5</h5>
-                      <div class="review-date">
-                        <p class="date">Reviewed on 22nd March, 2024</p>
-                      </div>
-                    </div>
-                    <div class="rev-description">
-                      <p>
-                        I was initially apprehensive, having no prior design
-                        experience. But the instructor, John Doe, did an amazing
-                        job of breaking down complex concepts into easily
-                        digestible modules. The video lectures were engaging,
-                        and the real-world examples really helped solidify my
-                        understanding.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="review-bottom border-rev">
-                  <div class="review-user user-flex">
-                    <h4 class="rev-user-wrapper">
-                      <img
-                        src="{% static '../static/images/span-6.svg' %}"
-                        alt="user"
-                      />
-                    </h4>
-                    <h4 class="rev-user-name">Mark Doe</h4>
-                  </div>
-                  <div class="the-review">
-                    <div class="total-rev-star">
-                      <h4 class="review-wrapper-single">
-                        <img
-                          src="{% static '../static/images/star.svg' %}"
-                          alt="star"
-                        />
-                      </h4>
-                      <h5 class="total-five">5</h5>
-                      <div class="review-date">
-                        <p class="date">Reviewed on 22nd March, 2024</p>
-                      </div>
-                    </div>
-                    <div class="rev-description">
-                      <p>
-                        I was initially apprehensive, having no prior design
-                        experience. But the instructor, John Doe, did an amazing
-                        job of breaking down complex concepts into easily
-                        digestible modules. The video lectures were engaging,
-                        and the real-world examples really helped solidify my
-                        understanding.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                {% endfor %} {% if not reviews %}
+                <p>No reviews available for this course yet.</p>
+                {% endif %}
 
                 <div class="view-more-rev">
                   <button class="view-more">View more Reviews</button>

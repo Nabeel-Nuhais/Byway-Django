@@ -554,7 +554,7 @@ header .head-container .head-right .user-border .user-wrapper {
   .border-separator {
   width: 100%;
   border: 1px solid #e2e8f0;
-  margin: 20px 0;
+  margin: 20px 0px 0px;
 }
 #course-description .description-container .syllabus-bottom .down-arrow {
   width: 12px;
@@ -665,12 +665,14 @@ header .head-container .head-right .user-border .user-wrapper {
 }
 #reviews .review-container .detailed-review .user-flex {
   display: flex;
-  width: 100%;
+  width: 35%;
   gap: 8px;
   height: fit-content;
   align-items: center;
 }
-
+.detailed-review {
+  width: 100%;
+}
 #reviews .review-container .detailed-review .rev-user-wrapper {
   width: 60px;
 }
