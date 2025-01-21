@@ -42,14 +42,13 @@ class Course(models.Model):
     level = models.CharField(max_length=50)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     languages = models.ManyToManyField(Language, blank=True)
-    # New fields
     role = models.CharField(max_length=255, blank=True, null=True)
     total_students = models.PositiveIntegerField(default=0)
-    total_courses = models.PositiveIntegerField(default=0)  # New field for total courses
-    reviews = models.PositiveIntegerField(default=0)  # New field for reviews
-    certification = models.TextField(blank=True, null=True)  # Certification details
-    course_description = models.TextField(blank=True, null=True)  # Detailed description
-    instructor_bio = models.TextField(blank=True, null=True)  # Instructor's bio
+    total_courses = models.PositiveIntegerField(default=0)  
+    reviews = models.PositiveIntegerField(default=0) 
+    certification = models.TextField(blank=True, null=True) 
+    course_description = models.TextField(blank=True, null=True) 
+    instructor_bio = models.TextField(blank=True, null=True)  
 
     @property
     def discounted_price(self):
@@ -67,8 +66,8 @@ class Instructor(models.Model):
     rating = models.DecimalField(max_digits=3, decimal_places=2, default=0.0)
     single_star = models.FileField(upload_to='instructor_icons/', blank=True, null=True)
     total_students = models.PositiveIntegerField(default=0)
-    total_courses = models.PositiveIntegerField(default=0)  # New field for total courses
-    reviews = models.PositiveIntegerField(default=0)  # New field for reviews
+    total_courses = models.PositiveIntegerField(default=0) 
+    reviews = models.PositiveIntegerField(default=0)  
 
     def __str__(self):
         return self.name
@@ -86,9 +85,9 @@ class Testimonial(models.Model):
     
 class Syllabus(models.Model):
     course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='syllabus')
-    title = models.CharField(max_length=200)  # Section title
-    lessons = models.PositiveIntegerField()  # Number of lessons in this section
-    duration = models.CharField(max_length=50)  # Duration of this section (e.g., "1 hour")
+    title = models.CharField(max_length=200) 
+    lessons = models.PositiveIntegerField() 
+    duration = models.CharField(max_length=50) 
 
     def __str__(self):
         return f"{self.title} - {self.course.title}"
@@ -98,13 +97,13 @@ class Review(models.Model):
     course = models.ForeignKey(
         Course, 
         on_delete=models.CASCADE, 
-        related_name='course_reviews'  # Use a unique related_name
+        related_name='course_reviews'  
     )
-    user_name = models.CharField(max_length=100)  # Name of the reviewer
-    user_image = models.ImageField(upload_to='reviews/', null=True, blank=True)  # Optional profile image
-    rating = models.PositiveIntegerField(default=1)  # Rating out of 5
-    review_date = models.DateField(auto_now_add=True)  # Automatically set the review date
-    description = models.TextField()  # Review description
+    user_name = models.CharField(max_length=100) 
+    user_image = models.ImageField(upload_to='reviews/', null=True, blank=True) 
+    rating = models.PositiveIntegerField(default=1) 
+    review_date = models.DateField(auto_now_add=True) 
+    description = models.TextField()  
 
     def __str__(self):
         return f"{self.user_name} - {self.course.title} ({self.rating} stars)"
