@@ -4,8 +4,8 @@
     {% load static %}
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static '../static/css/courses.css' %}" />
-    <title>Courses</title>
+    <link rel="stylesheet" href="{% static '../static/css/category.css' %}" />
+    <title>{{ selected_category.title }}</title>
   </head>
   <body>
     <!-- Header -->
@@ -29,49 +29,53 @@
       </section>
     </header>
 
-    <!-- All courses -->
-    <section id="highlights">
-      <section class="wrapper">
-        <div class="highlight-container">
-          <div class="highlight highlight-course">
-            <div class="top-headings">
-              <h5 class="left-heading">All Courses</h5>
+    <!-- Breadcrumb navigation -->
+    <section class="wrapper">
+      <nav class="breadcrumb">
+        <a href="{% url 'web:byway' %}">Home</a> >
+        <span>{{ selected_category.title }}</span>
+      </nav>
+    </section>
+
+    <!-- Category Courses Section -->
+    <section id="category-courses">
+      <div class="wrapper">
+        <h2>{{ selected_category.title }}</h2>
+
+        {% if courses %}
+        <div class="course-bottom">
+          {% for course in courses %}
+          <a
+            href="{% url 'web:single_course' course.id %}"
+            class="course-items"
+          >
+            <div class="course-image">
+              <img src="{{ course.image.url }}" alt="{{ course.title }}" />
             </div>
-            <div class="course-bottom">
-              {% for course in courses %}
-              <a
-                href="{% url 'web:single_course' course.id %}"
-                class="course-items"
+            <h5 class="course-title">{{ course.title }}</h5>
+            <p class="mentor">By {{ course.instructor }}</p>
+            <div class="star-wrapper">
+              <h4
+                style="display: flex; align-items: center; gap: 5px"
+                class="star-icons"
               >
-                <div class="course-image">
-                  <img src="{{ course.image.url }}" alt="{{ course.title }}" />
-                </div>
-                <h5 class="course-title">{{ course.title }}</h5>
-                <p class="mentor">By {{ course.instructor }}</p>
-                <div class="star-wrapper">
-                  <h4
-                    style="display: flex; align-items: center; gap: 5px"
-                    class="star-icons"
-                  >
-                    <img src="{{ course.star_rating.url }}" alt="star-icon" />
-                    {{ course.rating }}
-                  </h4>
-                  <p class="rating-count">
-                    ({{ course.total_ratings }} Ratings)
-                  </p>
-                </div>
-                <div class="course-description">
-                  {{ course.total_hours }} Total Hours. {{ course.total_lectures }} Lectures. {{ course.level }}
-                </div>
-                <div class="course-rate">${{ course.price }}</div>
-              </a>
-              {% empty %}
-              <p>No courses available at the moment.</p>
-              {% endfor %}
+                <img src="{{ course.star_rating.url }}" alt="star-icon" />
+                {{ course.rating }}
+              </h4>
+              <p class="rating-count">({{ course.total_ratings }} Ratings)</p>
             </div>
-          </div>
+            <div class="course-description">
+              {{ course.total_hours }} Total Hours. {{ course.total_lectures }}
+              Lectures. {{ course.level }}
+            </div>
+            <div class="course-rate">${{ course.price }}</div>
+          </a>
+          {% endfor %}
         </div>
-      </section>
+        {% else %}
+        <p>No courses available in this category.</p>
+        {% endif %}
+      </div>
     </section>
 
     <!-- Footer -->

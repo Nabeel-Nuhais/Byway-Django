@@ -73,18 +73,20 @@ header .head-container .head-right .signup {
   cursor: pointer;
 }
 
-/* All courses */
-#highlights .highlight-container .highlight .top-headings {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
+.breadcrumb {
+  padding: 30px 0 0;
 }
-#highlights .highlight-container .highlight .top-headings .left-heading {
-  font-size: 24px;
-  font-weight: 600;
-  color: #0f172a;
+
+.breadcrumb a {
+  font-size: 16px;
+  font-weight: 500;
 }
+
+.breadcrumb span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
 .course-items {
   border: 1px solid #e0f2fe;
   border-radius: 8px;
@@ -128,13 +130,18 @@ header .head-container .head-right .signup {
   font-weight: 600;
   color: #0f172a;
 }
-#highlights .highlight-container .highlight .course-bottom {
+.course-bottom {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
-#highlights .highlight-container .highlight-course {
-  padding: 55px 0;
+#category-courses {
+  padding: 25px 0 55px;
+}
+#category-courses h2 {
+  font-size: 24px;
+  font-weight: 600;
+  padding-bottom: 15px;
 }
 
 /* Footer */
@@ -208,34 +215,22 @@ footer .footer-container .bg-wrapper {
 }
 
 @media all and (max-width: 980px) {
-  #highlights .highlight-container .highlight .course-bottom {
+  .course-bottom {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media all and (max-width: 640px) {
-  header .head-container .head-right .cart-wrapper {
-    cursor: pointer;
-    width: 18px;
-  }
-  header .head-container .head-right .login {
-    font-size: 13px;
-  }
-  header .head-container .head-right .signup {
-    font-size: 13px;
-  }
-  #course-count .course-container ul li {
-    font-size: 28px;
-  }
-  #course-count .course-container ul {
+  .course-items .star-wrapper {
+    padding: 5px 0;
     display: block;
   }
-  #course-count .course-container ul .border {
-    border-bottom: 2px solid #e2e8f0;
-    margin: 19px 0;
+  .breadcrumb a {
+    font-size: 14px;
   }
-  #highlights .highlight-container .highlight .top-headings .left-heading {
-    font-size: 22px;
+
+  .breadcrumb span {
+    font-size: 14px;
   }
   .course-items .course-title {
     font-size: 16px;
@@ -253,8 +248,10 @@ footer .footer-container .bg-wrapper {
     font-size: 18px;
   }
   .course-items .star-wrapper {
-    padding: 5px 0;
-    display: block;
+    padding: 0;
+  }
+  #category-courses h2 {
+    font-size: 22px;
   }
   footer .footer-container .first-item .logo-title {
     font-size: 22px;
@@ -278,19 +275,16 @@ footer .footer-container .bg-wrapper {
 }
 
 @media all and (max-width: 540px) {
-  #highlights .highlight-container .highlight .course-bottom {
+  .course-bottom {
     grid-template-columns: repeat(1, 1fr);
   }
 }
 
 @media all and (max-width: 480px) {
-  #highlights .highlight-container .highlight .course-bottom {
+  .course-bottom {
     gap: 10px;
   }
   .course-items {
     padding: 5px;
-  }
-  .course-items .star-wrapper {
-    display: block;
   }
 }

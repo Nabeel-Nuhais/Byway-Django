@@ -131,7 +131,10 @@
             </div>
             <div class="bottom-cards">
               {% for category in categories %}
-              <div class="card-items">
+              <a
+                href="{% url 'web:category_courses' category.id %}"
+                class="card-items"
+              >
                 <div class="astro-wrapper">
                   <h4 class="cat-icons">
                     <img
@@ -144,10 +147,11 @@
                 <div class="course-count">
                   {{ category.course_count }} Courses
                 </div>
-              </div>
+              </a>
               {% endfor %}
             </div>
           </div>
+
           <!-- top courses -->
           <div class="highlight highlight-course">
             <div class="top-headings">
@@ -158,7 +162,10 @@
             </div>
             <div class="course-bottom">
               {% for course in courses %}
-              <a href="{% url 'web:single' %}" class="course-items">
+              <a
+                href="{% url 'web:single_course' course.id %}"
+                class="course-items"
+              >
                 <div class="course-image">
                   <img src="{{ course.image.url }}" alt="{{ course.title }}" />
                 </div>
@@ -169,7 +176,7 @@
                     style="display: flex; align-items: center; gap: 5px"
                     class="star-icons"
                   >
-                    <img src="{{ course.star_icon.url }}" alt="star-icon" />
+                    <img src="{{ course.star_rating.url }}" alt="star-icon" />
                     {{ course.rating }}
                   </h4>
                   <p class="rating-count">
@@ -177,13 +184,14 @@
                   </p>
                 </div>
                 <div class="course-description">
-                  {{ course.total_hours }} Total Hours. {{course.total_lectures}} Lectures. {{ course.level }}
+                  {{ course.total_hours }} Total Hours. {{ course.total_lectures }} Lectures. {{ course.level }}
                 </div>
                 <div class="course-rate">${{ course.price }}</div>
               </a>
               {% endfor %}
             </div>
           </div>
+
           <!-- top instructors -->
           <div class="highlight">
             <div class="top-headings">
@@ -203,7 +211,9 @@
                 <p class="instructor-skills">{{ instructor.role }}</p>
                 <div class="star-instructor">
                   <h4 class="star-single">
+                    {% if instructor.single_star %}
                     <img src="{{ instructor.single_star.url }}" alt="star" />
+                    {% endif %}
                     <p class="instructor-rating">{{ instructor.rating }}</p>
                   </h4>
                   <div class="students-count">
@@ -254,16 +264,11 @@
                     />
                   </h4>
                 </div>
-                <p class="review">
-                  "{{ testimonial.quote }}"
-                </p>
+                <p class="review">"{{ testimonial.quote }}"</p>
                 <div class="designer">
                   <div class="user-wrapper">
                     <h4 class="user-icon">
-                      <img
-                        src="{{ testimonial.image.url }}"
-                        alt="designer"
-                      />
+                      <img src="{{ testimonial.image.url }}" alt="designer" />
                     </h4>
                     <div class="designer-info">
                       <h5 class="designer-name">{{ testimonial.name }}</h5>

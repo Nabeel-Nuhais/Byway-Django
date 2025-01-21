@@ -398,6 +398,7 @@ header .head-container .head-right .signup {
   font-size: 12px;
   font-weight: 600;
   color: #0f172a;
+  padding-top: 3px;
 }
 .instructor-bottom .instructor-items .students-count {
   font-size: 12px;
@@ -765,6 +766,7 @@ footer .footer-container .bg-wrapper {
   }
   .course-items .star-wrapper {
     padding: 0;
+    display: block;
   }
   .instructor-bottom .instructor-items .course-title {
     font-size: 16px;
