@@ -92,7 +92,7 @@ header .head-container .head-right .signup {
   border-radius: 8px;
   padding: 16px;
   cursor: pointer;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), -1px -1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 8px 0px #3B82F61F;
 }
 .course-items:hover {
   background: #f8fafc;
@@ -283,6 +283,7 @@ footer .footer-container .bg-wrapper {
 @media all and (max-width: 480px) {
   .course-bottom {
     gap: 10px;
+    grid-template-columns: repeat(1, 1fr);
   }
   .course-items {
     padding: 5px;

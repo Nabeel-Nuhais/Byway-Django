@@ -494,6 +494,54 @@
           </div>
         </section>
       </section>
+      
+      <section id="more">
+        <section class="wrapper">
+          <div class="highlight-container">
+
+            <!-- top courses -->
+            <div class="highlight highlight-course">
+              <div class="top-headings">
+                <h5 class="left-heading">More Courses</h5>
+                <a href="{% url 'web:courses' %}" class="right-see_all"
+                  >See All</a
+                >
+              </div>
+              <div class="course-bottom">
+                {% for course in courses %}
+                <a
+                  href="{% url 'web:single_course' course.id %}"
+                  class="course-items"
+                >
+                  <div class="course-image">
+                    <img src="{{ course.image.url }}" alt="{{ course.title }}" />
+                  </div>
+                  <h5 class="course-title">{{ course.title }}</h5>
+                  <p class="mentor">By {{ course.instructor }}</p>
+                  <div class="star-wrapper">
+                    <h4
+                      style="display: flex; align-items: center; gap: 5px"
+                      class="star-icons"
+                    >
+                      <img src="{{ course.star_rating.url }}" alt="star-icon" />
+                      {{ course.rating }}
+                    </h4>
+                    <p class="rating-count">
+                      ({{ course.total_ratings }} Ratings)
+                    </p>
+                  </div>
+                  <div class="course-description">
+                    {{ course.total_hours }} Total Hours. {{ course.total_lectures }} Lectures. {{ course.level }}
+                  </div>
+                  <div class="course-rate">${{ course.price }}</div>
+                </a>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+
+        </section>
+      </section>
 
       <!-- Footer -->
       <footer>
@@ -546,7 +594,7 @@
               </ul>
               <div class="social-media">
                 <div class="bg-wrapper">
-                  <a href="https://www.facebook.com/" class="social-wrapper">
+                  <a target="_blank" href="https://www.facebook.com/" class="social-wrapper">
                     <img
                       src="{% static '../static/images/facebook.png' %}"
                       alt="facebook"
@@ -554,7 +602,7 @@
                   </a>
                 </div>
                 <div class="bg-wrapper">
-                  <a href="https://github.com/" class="social-wrapper">
+                  <a target="_blank" href="https://github.com/" class="social-wrapper">
                     <img
                       src="{% static '../static/images/github.png' %}"
                       alt="github"
@@ -562,7 +610,7 @@
                   </a>
                 </div>
                 <div class="bg-wrapper">
-                  <a href="https://www.google.com/" class="social-wrapper">
+                  <a target="_blank" href="https://www.google.com/" class="social-wrapper">
                     <img
                       src="{% static '../static/images/google.jpg' %}"
                       alt="google"
@@ -570,7 +618,7 @@
                   </a>
                 </div>
                 <div class="bg-wrapper">
-                  <a href="https://x.com/" class="social-wrapper">
+                  <a target="_blank" href="https://x.com/" class="social-wrapper">
                     <img
                       src="{% static '../static/images/twitter.avif' %}"
                       alt="twitter"
@@ -578,7 +626,7 @@
                   </a>
                 </div>
                 <div class="bg-wrapper">
-                  <a
+                  <a target="_blank"
                     href="https://www.microsoft.com/en-in/"
                     class="social-wrapper"
                   >

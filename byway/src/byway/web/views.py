@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Category, Course, Instructor, Testimonial, Review
+from .models import Category, Course, Instructor, Testimonial, Review, Syllabus
 
 
 def byway(request):
@@ -39,15 +39,19 @@ def courses(request):
 
 
 def single_course(request, course_id):
+    courses = Course.objects.order_by('-rating')[:4]  # Show top-rated courses
     course = get_object_or_404(Course, id=course_id)
     reviews = Review.objects.filter(course=course)  
     testimonials = Testimonial.objects.all()
     instructor = Instructor.objects.filter(name=course.instructor).first() if course.instructor else None
+    syllabus = Syllabus.objects.filter(course=course)
     context = {
         'course': course,
         'reviews': reviews,
         'testimonials': testimonials,
         'instructor': instructor,
+        'syllabus': syllabus,
+        'courses': courses,
     }
 
     return render(request, 'single.html', context)

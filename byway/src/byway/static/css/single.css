@@ -263,7 +263,7 @@ header .head-container .head-right .user-border .user-wrapper {
 }
 #card .card-container {
   border: 1px solid #e2e8f0;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), -1px -1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 8px 0px #3b82f61f;
   border-radius: 8px;
   width: fit-content;
 }
@@ -349,7 +349,7 @@ header .head-container .head-right .user-border .user-wrapper {
   height: 40px;
   align-items: center;
   border: 1px solid #e0f2fe;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), -1px -1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 8px 0px #3b82f61f;
 }
 #card
   .card-container
@@ -760,7 +760,7 @@ header .head-container .head-right .user-border .user-wrapper {
   border-radius: 8px;
   padding: 16px;
   cursor: pointer;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), -1px -1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 8px 0px #3b82f61f;
   opacity: 0;
   transform: translateX(50px);
   transition: opacity 0.3s ease, transform 0.3s ease;
@@ -824,6 +824,79 @@ header .head-container .head-right .user-border .user-wrapper {
   font-size: 14px;
   font-weight: 400;
   color: #334155;
+}
+
+/* More */
+#more .highlight-container {
+  margin: 55px 0;
+}
+#more .highlight-container .highlight .top-headings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+#more .highlight-container .highlight .top-headings .left-heading {
+  font-size: 24px;
+  font-weight: 600;
+  color: #0f172a;
+}
+#more .highlight-container .highlight .top-headings .right-see_all {
+  font-size: 14px;
+  font-weight: 500;
+  color: #3b82f6;
+}
+
+.course-items {
+  border: 1px solid #e0f2fe;
+  border-radius: 8px;
+  padding: 16px;
+  cursor: pointer;
+  box-shadow: 0px 0px 8px 0px #3b82f61f;
+}
+.course-items:hover {
+  background: #f8fafc;
+}
+.course-items .course-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f172a;
+  padding: 12px 0 6px 0;
+}
+.course-items .mentor {
+  font-size: 14px;
+  font-weight: 400;
+  color: #334155;
+}
+.course-items .star-wrapper {
+  display: flex;
+  gap: 8px;
+  padding: 4px 0;
+  align-items: center;
+}
+.course-items .star-wrapper .rating-count {
+  font-size: 12px;
+  font-weight: 600;
+  color: #334155;
+}
+.course-items .course-description {
+  font-size: 14px;
+  font-weight: 400;
+  color: #334155;
+  padding-bottom: 6px;
+}
+.course-items .course-rate {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0f172a;
+}
+#more .highlight-container .highlight .course-bottom {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+#more .highlight-container .highlight-course {
+  padding: 55px 0;
 }
 
 /* Promotion */
@@ -957,6 +1030,9 @@ footer .footer-container .bg-wrapper {
 
 /* Responsive */
 @media all and (max-width: 1200px) {
+  #more .highlight-container .highlight .course-bottom {
+    grid-template-columns: repeat(3, 1fr);
+  }
   #card {
     position: unset;
     padding-top: 45px;
@@ -995,6 +1071,9 @@ footer .footer-container .bg-wrapper {
   #reviews .review-container .rev-middle {
     flex-wrap: wrap;
   }
+  #more .highlight-container .highlight .course-bottom {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media all and (max-width: 768px) {
@@ -1007,6 +1086,39 @@ footer .footer-container .bg-wrapper {
 }
 
 @media all and (max-width: 640px) {
+  #more .highlight-container .highlight .top-headings .left-heading {
+    font-size: 22px;
+  }
+  #more .highlight-container .highlight .bottom-cards .card-items .cat-title {
+    font-size: 18px;
+  }
+  #more
+    .highlight-container
+    .highlight
+    .bottom-cards
+    .card-items
+    .course-count {
+    font-size: 14px;
+  }
+  .course-items .course-title {
+    font-size: 16px;
+  }
+  .course-items .mentor {
+    font-size: 13px;
+  }
+  .course-items .star-wrapper .star-icons {
+    width: 45%;
+  }
+  .course-items .course-description {
+    font-size: 13px;
+  }
+  .course-items .course-rate {
+    font-size: 18px;
+  }
+  .course-items .star-wrapper {
+    padding: 0;
+    display: block;
+  }
   #spotlight .spot-container .navigate-top .home {
     font-size: 13px;
   }
@@ -1284,6 +1396,32 @@ footer .footer-container .bg-wrapper {
 }
 
 @media all and (max-width: 480px) {
+  #more .highlight-container .highlight .bottom-cards {
+    gap: 10px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #more .highlight-container .highlight .bottom-cards .card-items {
+    padding: 10px;
+  }
+  #more
+    .highlight-container
+    .highlight
+    .bottom-cards
+    .card-items
+    .astro-wrapper
+    .cat-icons {
+    padding: 10px;
+  }
+  #more .highlight-container .highlight .course-bottom {
+    gap: 10px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .course-items {
+    padding: 5px;
+  }
+  .course-items .star-wrapper {
+    display: block;
+  }
   #card {
     display: none;
   }
