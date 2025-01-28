@@ -351,7 +351,7 @@ header .head-container .head-right .signup {
 /* top instructors */
 .instructor-bottom {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
 }
 .instructor-bottom .instructor-items {
@@ -654,6 +654,9 @@ footer .footer-container .bg-wrapper {
   #highlights .highlight-container .highlight .course-bottom {
     grid-template-columns: repeat(3, 1fr);
   }
+  .instructor-bottom {
+    grid-template-columns: repeat(3, 1fr);
+}
 }
 
 @media all and (max-width: 1024px) {
@@ -666,7 +669,7 @@ footer .footer-container .bg-wrapper {
     margin: 65px 0;
   }
   #spotlight .spot-container .spot-left .start {
-    width: 50%;
+    width: fit-content;
   }
   #spotlight .spot-container .spot-left {
     width: 100%;
@@ -680,6 +683,9 @@ footer .footer-container .bg-wrapper {
   #highlights .highlight-container .highlight .course-bottom {
     grid-template-columns: repeat(2, 1fr);
   }
+  .instructor-bottom {
+    grid-template-columns: repeat(2, 1fr);
+}
   #promotion .promo-container .promo-bottom {
     gap: 40px;
   }
@@ -689,9 +695,6 @@ footer .footer-container .bg-wrapper {
 }
 
 @media all and (max-width: 768px) {
-  .instructor-bottom {
-    grid-template-columns: repeat(2, 1fr);
-  }
   .instructor-bottom .instructor-items .instructor-skills {
     padding-bottom: 6px;
   }
@@ -873,6 +876,9 @@ footer .footer-container .bg-wrapper {
     gap: 10px;
     grid-template-columns: repeat(1, 1fr);
   }
+  .instructor-bottom {
+    grid-template-columns: repeat(1, 1fr);
+}
   #highlights .highlight-container .highlight .bottom-cards .card-items {
     padding: 10px;
   }
